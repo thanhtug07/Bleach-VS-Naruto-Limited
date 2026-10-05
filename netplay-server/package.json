@@ -1,0 +1,11 @@
+{
+  "name": "bvn-netplay-server",
+  "version": "1.0.0",
+  "description": "Headless TCP relay server for Bleach VS Naruto 1v1 netplay (Flash Socket client). No dependencies.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test-clients.js"
+  },
+  "license": "GPL-3.0-only"
+}

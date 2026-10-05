@@ -1,0 +1,7 @@
+node_modules/
+*.swf
+*.exe
+Game/
+__pycache__/
+*.log
+.DS_Store
