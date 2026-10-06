@@ -1,0 +1,1914 @@
+{
+  "fighter": {
+    "path": {
+      "fighter": "fighter/",
+      "face": "face/",
+      "bgm": "bgm/"
+    },
+    "data": [
+      {
+        "id": "ichigo",
+        "name": "Kurosaki Ichigo",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "ichigo.swf",
+          "face": "ichigo.png",
+          "face_big": "ichigo_b.png",
+          "face_bar": "ichigo_m.png",
+          "face_win": "ichigo_w.png"
+        },
+        "says": [
+          "Chỉ có chiến đấu thì chả vui gì cả, chỉ sống qua ngày cũng chẳng có ý nghĩa gì.",
+          "Tao cũng chẳng biết tại sao nữa, nói chung là đã đời!",
+          "Chính vì chúng ta không nhìn thấy nên nó mới đáng sợ."
+        ],
+        "bgm": {
+          "url": "character/ichigo.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "ichigo_bankai",
+        "name": "Kurosaki Ichigo Bankai",
+        "comic_type": 0,
+        "start_frame": 2,
+        "urls": {
+          "file": "ichigo.swf",
+          "face": "ichigo_bankai.png",
+          "face_big": "ichigo_bankai_b.png",
+          "face_bar": "ichigo_bankai_m.png",
+          "face_win": "ichigo_bankai_w.png"
+        },
+        "says": [
+          "Chỉ có chiến đấu thì chả vui gì cả, chỉ sống qua ngày cũng chẳng có ý nghĩa gì.",
+          "Tao cũng chẳng biết tại sao nữa, nói chung là đã đời!",
+          "Chính vì chúng ta không nhìn thấy nên nó mới đáng sợ."
+        ],
+        "bgm": {
+          "url": "character/ichigo.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "ichigo_vizored_half",
+        "name": "Kurosaki Ichigo nửa Vizard",
+        "comic_type": 0,
+        "start_frame": 3,
+        "urls": {
+          "file": "ichigo.swf",
+          "face": "ichigo_vizored_half.png",
+          "face_big": "ichigo_vizored_half_b.png",
+          "face_bar": "ichigo_vizored_half_m.png",
+          "face_win": "ichigo_vizored_half_w.png"
+        },
+        "says": [
+          "Ichigo này, khác biệt giữa vua và thú cưỡi là gì?|Đừng có nói với tao là hai chân với bốn chân đấy!",
+          "Chỉ có một câu trả lời — đó là bản năng!|Bản năng giết chóc in sâu vào gốc rễ nguyên thủy nhất của muôn loài!",
+          "Cái mày thiếu chính là cái này, bản năng trần trụi đó!|Nên mày mới yếu hơn tao, Ichigo!"
+        ],
+        "bgm": {
+          "url": "character/ichigo.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "ichigo_vizored",
+        "name": "Kurosaki Ichigo Vizard",
+        "comic_type": 0,
+        "start_frame": 4,
+        "urls": {
+          "file": "ichigo.swf",
+          "face": "ichigo_vizored.png",
+          "face_big": "ichigo_vizored_b.png",
+          "face_bar": "ichigo_vizored_m.png",
+          "face_win": "ichigo_vizored_w.png"
+        },
+        "says": [
+          "Chỉ có chiến đấu thì chả vui gì cả, chỉ sống qua ngày cũng chẳng có ý nghĩa gì.",
+          "Tao cũng chẳng biết tại sao nữa, nói chung là đã đời!",
+          "Chính vì chúng ta không nhìn thấy nên nó mới đáng sợ."
+        ],
+        "bgm": {
+          "url": "bleachboss.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "ichigo_zero",
+        "name": "Kurosaki Ichigo Zero",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "ichigo_zero.swf",
+          "face": "ichigo_zero.png",
+          "face_big": "ichigo_zero_b.png",
+          "face_bar": "ichigo_zero_m.png",
+          "face_win": "ichigo_w.png"
+        },
+        "says": [
+          "Chỉ có chiến đấu thì chả vui gì cả, chỉ sống qua ngày cũng chẳng có ý nghĩa gì.",
+          "Tao cũng chẳng biết tại sao nữa, nói chung là đã đời!",
+          "Chính vì chúng ta không nhìn thấy nên nó mới đáng sợ."
+        ],
+        "bgm": {
+          "url": "character/ichigo.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "ogihci",
+        "name": "Ichigo Hollow",
+        "comic_type": 0,
+        "start_frame": 2,
+        "urls": {
+          "file": "ichigo_zero.swf",
+          "face": "ogihci.png",
+          "face_big": "ogihci_b.png",
+          "face_bar": "ogihci_m.png",
+          "face_win": "ogihci_w.png"
+        },
+        "says": [
+          "Ichigo này, khác biệt giữa vua và thú cưỡi là gì?|Đừng có nói với tao là hai chân với bốn chân đấy!",
+          "Chỉ có một câu trả lời — đó là bản năng!|Bản năng giết chóc in sâu vào gốc rễ nguyên thủy nhất của muôn loài!",
+          "Cái mày thiếu chính là cái này, bản năng trần trụi đó!|Nên mày mới yếu hơn tao, Ichigo!"
+        ],
+        "bgm": {
+          "url": "character/ichigo.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "ogihci_bankai",
+        "name": "Ichigo Hollow Bankai",
+        "comic_type": 0,
+        "start_frame": 3,
+        "urls": {
+          "file": "ichigo_zero.swf",
+          "face": "ogihci_bankai.png",
+          "face_big": "ogihci_bankai_b.png",
+          "face_bar": "ogihci_bankai_m.png",
+          "face_win": "ogihci_w.png"
+        },
+        "says": [
+          "Ichigo này, khác biệt giữa vua và thú cưỡi là gì?|Đừng có nói với tao là hai chân với bốn chân đấy!",
+          "Chỉ có một câu trả lời — đó là bản năng!|Bản năng giết chóc in sâu vào gốc rễ nguyên thủy nhất của muôn loài!",
+          "Cái mày thiếu chính là cái này, bản năng trần trụi đó!|Nên mày mới yếu hơn tao, Ichigo!"
+        ],
+        "bgm": {
+          "url": "bleachboss.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "rukia",
+        "name": "Kuchiki Rukia",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "rukia.swf",
+          "face": "rukia.png",
+          "face_big": "rukia_b.png",
+          "face_bar": "rukia_m.png",
+          "face_win": "rukia_w.png"
+        },
+        "says": [
+          "Số phận có tuần hoàn không? Hay nó vươn về phía trước?|Nếu là tuần hoàn, có nên đập vỡ vòng tuần hoàn ấy không?|Hay là cam chịu số phận?",
+          "Con người có thể ôm lấy hy vọng, là vì họ không nhìn thấy cái chết."
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "rukia_shikai",
+        "name": "Kuchiki Rukia Shikai",
+        "comic_type": 0,
+        "start_frame": 2,
+        "urls": {
+          "file": "rukia.swf",
+          "face": "rukia_shikai.png",
+          "face_big": "rukia_shikai_b.png",
+          "face_bar": "rukia_shikai_m.png",
+          "face_win": "rukia_shikai_w.png"
+        },
+        "says": [
+          "Số phận có tuần hoàn không? Hay nó vươn về phía trước?|Nếu là tuần hoàn, có nên đập vỡ vòng tuần hoàn ấy không?|Hay là cam chịu số phận?",
+          "Con người có thể ôm lấy hy vọng, là vì họ không nhìn thấy cái chết."
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "renji",
+        "name": "Abarai Renji",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "renji.swf",
+          "face": "renji.png",
+          "face_big": "renji_b.png",
+          "face_bar": "renji_m.png",
+          "face_win": "renji_w.png"
+        },
+        "says": [
+          "Ta từng thề, từng nói rằng nhất định phải cứu cô ấy…|Không thề với ai cả, chỉ thề với chính linh hồn của ta!",
+          "Thắp lửa lên những tháp nhọn không thể chạm tới, như thể mọi chuyện sẽ ổn mà chẳng cần ngước nhìn vì sao,|như thể chẳng cần hét đến rách cổ họng."
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "kenpachi",
+        "name": "Zaraki Kenpachi",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "kenpachi.swf",
+          "face": "kenpachi.png",
+          "face_big": "kenpachi_b.png",
+          "face_bar": "kenpachi_m.png",
+          "face_win": "kenpachi_w.png"
+        },
+        "says": [
+          "Lên nào, huyết chiến đi!",
+          "Không sợ cái chết, là để hưởng thụ chính cái chết.",
+          "Mỗi lần vứt bỏ lòng tự trọng, chúng ta lại thêm giống thú vật.|Mỗi lần bóp nghẹt một trái tim, chúng ta lại bước xa thú vật thêm một bước."
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 80
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "ikkaku",
+        "name": "Madarame Ikkaku",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "ikkaku.swf",
+          "face": "ikkaku.png",
+          "face_big": "ikkaku_b.png",
+          "face_bar": "ikkaku_m.png",
+          "face_win": "ikkaku_w.png"
+        },
+        "says": [
+          "Tất cả chúng ta, từ khoảnh khắc chào đời đã bước về phía cái chết.",
+          "Kẻ không thể vượt qua cái chết, thì phải hiểu rõ một điều gì đó.",
+          "Kết thúc luôn tồn tại từ trước cả khi khởi đầu."
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "gin",
+        "name": "Ichimaru Gin",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "gin.swf",
+          "face": "gin.png",
+          "face_big": "gin_b.png",
+          "face_bar": "gin_m.png",
+          "face_win": "gin_w.png"
+        },
+        "says": [
+          "Ta không có gì để nói!",
+          "Xin lỗi, Đội trưởng Aizen.",
+          "Thật là bó tay…"
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "chad",
+        "name": "Sado Chad",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "chad.swf",
+          "face": "chad.png",
+          "face_big": "chad_b.png",
+          "face_bar": "chad_m.png",
+          "face_win": "chad_w.png"
+        },
+        "says": [
+          "Nếu tay không cầm kiếm, ta không thể bảo vệ em.",
+          "Nhưng nếu tay cứ mãi nắm chặt kiếm, ta không thể ôm chặt em.",
+          "……"
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "uryuu",
+        "name": "Ishida Uryuu",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "uryuu.swf",
+          "face": "uryuu.png",
+          "face_big": "uryuu_b.png",
+          "face_bar": "uryuu_m.png",
+          "face_win": "uryuu_w.png"
+        },
+        "says": [
+          "Ta sẽ đặt cả niềm tự hào của Quincy vào ván này, nhất định phải thắng mày!",
+          "Yếu đến không đáng một đòn…"
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "uryuu_ginreigojiaku",
+        "name": "Ishida Uryuu Ginrei Kojaku",
+        "comic_type": 0,
+        "start_frame": 2,
+        "urls": {
+          "file": "uryuu.swf",
+          "face": "uryuu_ginreigojiaku.png",
+          "face_big": "uryuu_ginreigojiaku_b.png",
+          "face_bar": "uryuu_ginreigojiaku_m.png",
+          "face_win": "uryuu_ginreigojiaku_w.png"
+        },
+        "says": [
+          "Ta sẽ đặt cả niềm tự hào của Quincy vào ván này, nhất định phải thắng mày!",
+          "Yếu đến không đáng một đòn…",
+          "Chúng ta hút lấy nhau, như giọt nước, như hành tinh;|chúng ta đẩy nhau ra, như nam châm, như màu da."
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "toushirou",
+        "name": "Hitsugaya Toushirou",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "toushirou.swf",
+          "face": "toushirou.png",
+          "face_big": "toushirou_b.png",
+          "face_bar": "toushirou_m.png",
+          "face_win": "toushirou_w.png"
+        },
+        "says": [
+          "Dưới nắng gắt, dấu chân in trên lớp băng mỏng biến mất không dấu vết.|Đừng sợ bị lừa gạt, thế giới này vốn được xây trên ảo tượng.",
+          "Đừng gọi tao là Toushirou! Phải gọi là Đội trưởng Hitsugaya!",
+          "Còn xa mới đạt tới đâu!"
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "toushirou_bankai",
+        "name": "Hitsugaya Toushirou Bankai",
+        "comic_type": 0,
+        "start_frame": 2,
+        "urls": {
+          "file": "toushirou.swf",
+          "face": "toushirou_bankai.png",
+          "face_big": "toushirou_bankai_b.png",
+          "face_bar": "toushirou_bankai_m.png",
+          "face_win": "toushirou_w.png"
+        },
+        "says": [
+          "Dưới nắng gắt, dấu chân in trên lớp băng mỏng biến mất không dấu vết.|Đừng sợ bị lừa gạt, thế giới này vốn được xây trên ảo tượng.",
+          "Đừng gọi tao là Toushirou! Phải gọi là Đội trưởng Hitsugaya!",
+          "Còn xa mới đạt tới đâu!"
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "byakuya",
+        "name": "Kuchiki Byakuya",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "byakuya.swf",
+          "face": "byakuya.png",
+          "face_big": "byakuya_b.png",
+          "face_bar": "byakuya_m.png",
+          "face_win": "byakuya_w.png"
+        },
+        "says": [
+          "Chậm chạp thật. Ngã xuống cũng chậm chạp thế.",
+          "Ồ… thật không ngờ một thường dân cũng hiểu được cảm giác của quý tộc.",
+          "Như mày mà chết dưới Bankai của tao? Còn sớm hơn một nghìn năm đấy!"
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "byakuya_bankai",
+        "name": "Kuchiki Byakuya Bankai",
+        "comic_type": 0,
+        "start_frame": 2,
+        "urls": {
+          "file": "byakuya.swf",
+          "face": "byakuya_bankai.png",
+          "face_big": "byakuya_bankai_b.png",
+          "face_bar": "byakuya_bankai_m.png",
+          "face_win": "byakuya_w.png"
+        },
+        "says": [
+          "Chậm chạp thật. Ngã xuống cũng chậm chạp thế.",
+          "Ồ… thật không ngờ một thường dân cũng hiểu được cảm giác của quý tộc.",
+          "Như mày mà chết dưới Bankai của tao? Còn sớm hơn một nghìn năm đấy!"
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 80
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "ulquiorra",
+        "name": "Ulquiorra Cifer",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "ulquiorra.swf",
+          "face": "ulquiorra.png",
+          "face_big": "ulquiorra_b.png",
+          "face_bar": "ulquiorra_m.png",
+          "face_win": "ulquiorra_w.png"
+        },
+        "says": [
+          "Mặt trời đã bị chúng ta hạ xuống rồi.",
+          "Không gì có thể lọt khỏi đôi mắt của ta.",
+          "Loài người, đến cuối cùng vẫn là sinh vật đầy bất ngờ."
+        ],
+        "bgm": {
+          "url": "bleachboss.mp3",
+          "rate": 90
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "ulquiorra_resurreccion",
+        "name": "Ulquiorra Resurreccion",
+        "comic_type": 0,
+        "start_frame": 2,
+        "urls": {
+          "file": "ulquiorra.swf",
+          "face": "ulquiorra_resurreccion.png",
+          "face_big": "ulquiorra_resurreccion_b.png",
+          "face_bar": "ulquiorra_resurreccion_m.png",
+          "face_win": "ulquiorra_w.png"
+        },
+        "says": [
+          "Mặt trời đã bị chúng ta hạ xuống rồi.",
+          "Không gì có thể lọt khỏi đôi mắt của ta.",
+          "Loài người, đến cuối cùng vẫn là sinh vật đầy bất ngờ."
+        ],
+        "bgm": {
+          "url": "bleachboss.mp3",
+          "rate": 90
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "aizen",
+        "name": "Aizen Sousuke",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "aizen.swf",
+          "face": "aizen_captain.png",
+          "face_big": "aizen_captain_b.png",
+          "face_bar": "aizen_captain_m.png",
+          "face_win": "aizen_captain_w.png"
+        },
+        "says": [
+          "Thế giới này thuở ban đầu chẳng có thật hay giả, chỉ có sự thật tồn tại sẵn.|Nhưng mọi thứ tồn tại trên đời,|chỉ chọn sống với thứ 'sự thật' có lợi cho mình mà thôi.",
+          "Sức sống không tương xứng với thực lực cũng là một sự lãng phí!",
+          "Không thể phán xét người đã chết…",
+          "Với thứ trình độ như mày, tao không cho phép lần nữa rút kiếm về phía tao!",
+          "Chúng ta thấy hoa trên vách đá đẹp,|là vì chính chúng ta cũng đang đứng trên vách đá,|đừng sợ, vì như bông hoa ấy, chân ta chưa từng bước ra ngoài."
+        ],
+        "bgm": {
+          "url": "bleachboss.mp3",
+          "rate": 100
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "aizen_gz",
+        "name": "Aizen Sousuke Phản Biến",
+        "comic_type": 0,
+        "start_frame": 2,
+        "urls": {
+          "file": "aizen.swf",
+          "face": "aizen.png",
+          "face_big": "aizen_b.png",
+          "face_bar": "aizen_m.png",
+          "face_win": "aizen_w.png"
+        },
+        "says": [
+          "Thế giới này thuở ban đầu chẳng có thật hay giả, chỉ có sự thật tồn tại sẵn.|Nhưng mọi thứ tồn tại trên đời,|chỉ chọn sống với thứ 'sự thật' có lợi cho mình mà thôi.",
+          "Sức sống không tương xứng với thực lực cũng là một sự lãng phí!",
+          "Không thể phán xét người đã chết…",
+          "Với thứ trình độ như mày, tao không cho phép lần nữa rút kiếm về phía tao!",
+          "Chúng ta thấy hoa trên vách đá đẹp,|là vì chính chúng ta cũng đang đứng trên vách đá,|đừng sợ, vì như bông hoa ấy, chân ta chưa từng bước ra ngoài."
+        ],
+        "bgm": {
+          "url": "bleachboss.mp3",
+          "rate": 100
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "mayuri",
+        "name": "Kurotsuchi Mayuri",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "mayuri.swf",
+          "face": "mayuri.png",
+          "face_big": "mayuri_b.png",
+          "face_bar": "mayuri_m.png",
+          "face_win": "mayuri_w.png"
+        },
+        "says": [
+          "Ta đã hết hứng thú với mày rồi, tránh ra khỏi đường.",
+          "Trời ạ, lại lãng phí mất bao nhiêu thời gian của ta.",
+          "Thuốc 8 lần mỗi ngày, thí nghiệm máy móc 5 lần mỗi ngày,|khi cải tạo anh ta sẽ cố tránh làm anh chết đi được."
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "orihime",
+        "name": "Inoue Orihime",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "orihime.swf",
+          "face": "orihime.png",
+          "face_big": "orihime_b.png",
+          "face_bar": "orihime_m.png",
+          "face_win": "orihime_w.png"
+        },
+        "says": [
+          "Nếu ta là giọt mưa ấy…|thì liệu ta có thể, như cách nối bầu trời và mặt đất chưa từng gặp nhau…|nối trái tim của một ai đó lại được không?",
+          "Giá mà cuộc đời có năm lần.|Thế thì ta sẽ sống ở năm thị trấn khác nhau,|làm năm công việc khác nhau… rồi cả năm lần… đều yêu cùng một người."
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "grimmjow",
+        "name": "Grimmjow Jaegerjaquez",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "grimmjow.swf",
+          "face": "grimmjow.png",
+          "face_big": "grimmjow_b.png",
+          "face_bar": "grimmjow_m.png",
+          "face_win": "grimmjow_w.png"
+        },
+        "says": [
+          "Chẳng hiểu tình yêu, chẳng hiểu ánh sáng… chỉ có hủy diệt mới là minh chứng cho sự tồn tại!",
+          "A ha ha ha ha… tiện thật đấy, Shinigami, rốt cuộc việc giết mày cũng có giá trị rồi.",
+          "Không thể tin nổi, sao tao lại thua thứ đồ như mày!"
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "soifon",
+        "name": "Soi Fon",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "soifon.swf",
+          "face": "soifon.png",
+          "face_big": "soifon_b.png",
+          "face_bar": "soifon_m.png",
+          "face_win": "soifon_w.png"
+        },
+        "says": [
+          "Cái bóng của mày tựa như… những kim độc không phương hướng… khâu kín con đường đi của ta.",
+          "Ánh sáng của mày tựa như… tia sét khẽ chạm tháp nước… cắt đứt nguồn sống của ta."
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "starrk",
+        "name": "Coyote Starrk",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "starrk.swf",
+          "face": "starrk.png",
+          "face_big": "starrk_b.png",
+          "face_bar": "starrk_m.png",
+          "face_win": "starrk_w.png"
+        },
+        "says": [
+          "Nỗi cô đơn đáng sợ ấy ăn mòn tận xương tủy, không tài nào thoát ra, miễn là không còn một mình, dẫu phải chia đôi chính mình.",
+          "Ta căm ghét cô đơn, nhưng nó luôn bám theo như bóng với hình."
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "yoruichi",
+        "name": "Shihouin Yoruichi",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "yoruichi.swf",
+          "face": "yoruichi.png",
+          "face_big": "yoruichi_b.png",
+          "face_bar": "yoruichi_m.png",
+          "face_win": "yoruichi_w.png"
+        },
+        "says": [
+          "Mà thua là khỏi quay về luôn đấy.",
+          "Mày nghĩ Shunpo cỡ đó mà bắt được tao à?|Muốn đuổi thì cứ đuổi đi,|tốc độ của Thuấn Thần Yoruichi đâu phải thứ cỡ các ngươi đuổi kịp.",
+          "Đừng có coi thường người ta,|quả là ta đã vứt bỏ cái danh thủ lĩnh quân đoàn,|nhưng ta đâu có nhớ là mình đã vứt luôn cái tên còn lại."
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "tensa",
+        "name": "Tensa Zangetsu",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "tensa.swf",
+          "face": "tensa.png",
+          "face_big": "tensa_b.png",
+          "face_bar": "tensa_m.png",
+          "face_win": "tensa_w.png"
+        },
+        "says": [
+          "Thứ ngươi muốn bảo vệ chẳng phải thứ ta muốn bảo vệ.",
+          "Thật mất mặt, đáng lẽ ngươi phải thở được chứ.",
+          "Ta có thứ mình muốn bảo vệ."
+        ],
+        "bgm": {
+          "url": "character/ichigo.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "naruto",
+        "name": "Uzumaki Naruto",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "naruto.swf",
+          "face": "naruto.png",
+          "face_big": "naruto_b.png",
+          "face_bar": "naruto_m.png",
+          "face_win": "naruto_w.png"
+        },
+        "says": [
+          "Chỉ cần mày trở thành ninja tuyệt nhất được cả làng công nhận,|mày sẽ có quyền giành lấy hai chữ Hokage!",
+          "Tao tuyệt đối không bỏ cuộc, vì đó chính là nhẫn đạo của tao!",
+          "Được! Tao quyết định rồi, tao sẽ đi con đường nhẫn đạo của riêng mình,|mạnh mẽ bước tiếp trên con đường không bao giờ để mình hối hận!"
+        ],
+        "bgm": {
+          "url": "character/naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "naruto_oneTail",
+        "name": "Uzumaki Naruto 1 Duôi",
+        "comic_type": 1,
+        "start_frame": 2,
+        "urls": {
+          "file": "naruto.swf",
+          "face": "naruto_oneTail.png",
+          "face_big": "naruto_oneTail_b.png",
+          "face_bar": "naruto_oneTail_m.png",
+          "face_win": "naruto_oneTail_w.png"
+        },
+        "says": [
+          "Chỉ cần mày trở thành ninja tuyệt nhất được cả làng công nhận,|mày sẽ có quyền giành lấy hai chữ Hokage!",
+          "Tao tuyệt đối không bỏ cuộc, vì đó chính là nhẫn đạo của tao!",
+          "Được! Tao quyết định rồi, tao sẽ đi con đường nhẫn đạo của riêng mình,|mạnh mẽ bước tiếp trên con đường không bao giờ để mình hối hận!"
+        ],
+        "bgm": {
+          "url": "character/naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "naruto_fourTail",
+        "name": "Uzumaki Naruto 4 Duôi",
+        "comic_type": 1,
+        "start_frame": 3,
+        "urls": {
+          "file": "naruto.swf",
+          "face": "naruto_fourTail.png",
+          "face_big": "naruto_fourTail_b.png",
+          "face_bar": "naruto_fourTail_m.png",
+          "face_win": "naruto_oneTail_w.png"
+        },
+        "says": [
+          "Chỉ cần mày trở thành ninja tuyệt nhất được cả làng công nhận,|mày sẽ có quyền giành lấy hai chữ Hokage!",
+          "Tao tuyệt đối không bỏ cuộc, vì đó chính là nhẫn đạo của tao!",
+          "Được! Tao quyết định rồi, tao sẽ đi con đường nhẫn đạo của riêng mình,|mạnh mẽ bước tiếp trên con đường không bao giờ để mình hối hận!"
+        ],
+        "bgm": {
+          "url": "narutoboss.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "naruto_hermit",
+        "name": "Uzumaki Naruto Tiên Nhân",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "naruto_hermit.swf",
+          "face": "naruto_hermit.png",
+          "face_big": "naruto_hermit_b.png",
+          "face_bar": "naruto_hermit_m.png",
+          "face_win": "naruto_hermit_w.png"
+        },
+        "says": [
+          "Chỉ cần mày trở thành ninja tuyệt nhất được cả làng công nhận,|mày sẽ có quyền giành lấy hai chữ Hokage!",
+          "Tao tuyệt đối không bỏ cuộc, vì đó chính là nhẫn đạo của tao!",
+          "Được! Tao quyết định rồi, tao sẽ đi con đường nhẫn đạo của riêng mình,|mạnh mẽ bước tiếp trên con đường không bao giờ để mình hối hận!"
+        ],
+        "bgm": {
+          "url": "character/naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "naruto_kurama",
+        "name": "Uzumaki Naruto Cửu Vĩ",
+        "comic_type": 1,
+        "start_frame": 2,
+        "urls": {
+          "file": "naruto_hermit.swf",
+          "face": "naruto_kurama.png",
+          "face_big": "naruto_kurama_b.png",
+          "face_bar": "naruto_kurama_m.png",
+          "face_win": "naruto_kurama_w.png"
+        },
+        "says": [
+          "Chỉ cần mày trở thành ninja tuyệt nhất được cả làng công nhận,|mày sẽ có quyền giành lấy hai chữ Hokage!",
+          "Tao tuyệt đối không bỏ cuộc, vì đó chính là nhẫn đạo của tao!",
+          "Được! Tao quyết định rồi, tao sẽ đi con đường nhẫn đạo của riêng mình,|mạnh mẽ bước tiếp trên con đường không bao giờ để mình hối hận!"
+        ],
+        "bgm": {
+          "url": "narutoboss.mp3",
+          "rate": 90
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "sakura",
+        "name": "Haruno Sakura",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "sakura.swf",
+          "face": "sakura.png",
+          "face_big": "sakura_b.png",
+          "face_bar": "sakura_m.png",
+          "face_win": "sakura_w.png"
+        },
+        "says": [
+          "Lúc nào ta cũng được người khác bảo vệ, thật không cam tâm… Vậy thì lần này… phải đến lượt ta bảo vệ những người mà ta trân quý…",
+          "Lúc nào… ta cũng mong mình có thể trở thành một ninja giỏi giang…"
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "sakura_sr",
+        "name": "Haruno Sakura Tam Nin",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "sakura_sr.swf",
+          "face": "sakura_sr.png",
+          "face_big": "sakura_sr_b.png",
+          "face_bar": "sakura_sr_m.png",
+          "face_win": "sakura_sr_w.png"
+        },
+        "says": [
+          "Lúc nào ta cũng được người khác bảo vệ, thật không cam tâm… Vậy thì lần này… phải đến lượt ta bảo vệ những người mà ta trân quý…",
+          "Lúc nào… ta cũng mong mình có thể trở thành một ninja giỏi giang…"
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "sasuke",
+        "name": "Uchiha Sasuke",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "sasuke.swf",
+          "face": "sasuke.png",
+          "face_big": "sasuke_b.png",
+          "face_bar": "sasuke_m.png",
+          "face_win": "sasuke_w.png"
+        },
+        "says": [
+          "Ràng buộc quá nhiều, chỉ khiến ta lạc mất chính mình.",
+          "Cô đơn, đâu phải nỗi buồn vì bị cha mẹ trách mắng có thể sánh được.",
+          "Ta là kẻ báo thù, sinh ra để báo thù, vì sự báo thù ta có thể từ bỏ tất cả."
+        ],
+        "bgm": {
+          "url": "character/sasuke.mp3",
+          "rate": 80
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "sasuke_mantra",
+        "name": "Uchiha Sasuke Nguyền Ấn",
+        "comic_type": 1,
+        "start_frame": 2,
+        "urls": {
+          "file": "sasuke.swf",
+          "face": "sasuke_mantra.png",
+          "face_big": "sasuke_mantra_b.png",
+          "face_bar": "sasuke_mantra_m.png",
+          "face_win": "sasuke_mantra_w.png"
+        },
+        "says": [
+          "Ràng buộc quá nhiều, chỉ khiến ta lạc mất chính mình.",
+          "Cô đơn, đâu phải nỗi buồn vì bị cha mẹ trách mắng có thể sánh được.",
+          "Ta là kẻ báo thù, sinh ra để báo thù, vì sự báo thù ta có thể từ bỏ tất cả."
+        ],
+        "bgm": {
+          "url": "character/sasuke.mp3",
+          "rate": 90
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "sasuke_susanoo",
+        "name": "Uchiha Sasuke Susanoo",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "sasuke_susanoo.swf",
+          "face": "sasuke_susanoo.png",
+          "face_big": "sasuke_susanoo_b.png",
+          "face_bar": "sasuke_susanoo_m.png",
+          "face_win": "sasuke_susanoo_w.png"
+        },
+        "says": [
+          "Ràng buộc quá nhiều, chỉ khiến ta lạc mất chính mình.",
+          "Cô đơn, đâu phải nỗi buồn vì bị cha mẹ trách mắng có thể sánh được.",
+          "Ta là kẻ báo thù, sinh ra để báo thù, vì sự báo thù ta có thể từ bỏ tất cả."
+        ],
+        "bgm": {
+          "url": "character/sasuke.mp3",
+          "rate": 90
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "sasuke_susanoo2",
+        "name": "Uchiha Sasuke Susanoo 2",
+        "comic_type": 1,
+        "start_frame": 2,
+        "urls": {
+          "file": "sasuke.swf",
+          "face": "sasuke_susanoo.png",
+          "face_big": "sasuke_susanoo_b.png",
+          "face_bar": "sasuke_susanoo_m.png",
+          "face_win": "sasuke_susanoo_w.png"
+        },
+        "says": [
+          "Ràng buộc quá nhiều, chỉ khiến ta lạc mất chính mình.",
+          "Cô đơn, đâu phải nỗi buồn vì bị cha mẹ trách mắng có thể sánh được.",
+          "Ta là kẻ báo thù, sinh ra để báo thù, vì sự báo thù ta có thể từ bỏ tất cả."
+        ],
+        "bgm": {
+          "url": "character/sasuke.mp3",
+          "rate": 90
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "karin",
+        "name": "Uzumaki Karin",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "karin.swf",
+          "face": "karin.png",
+          "face_big": "karin_b.png",
+          "face_bar": "karin_m.png",
+          "face_win": "karin_w.png"
+        },
+        "says": [
+          "Sasuke-kun, em chỉ muốn được ở cùng anh thôi…",
+          "Giá được nhìn gương mặt của anh lúc ấy thêm một lần nữa.",
+          "Sasuke-kun, anh đang ở đâu? Chờ em với…"
+        ],
+        "bgm": {
+          "url": "character/sasuke.mp3",
+          "rate": 50
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "juggo",
+        "name": "Jugo",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "juggo.swf",
+          "face": "juggo.png",
+          "face_big": "juggo_b.png",
+          "face_bar": "juggo_m.png",
+          "face_win": "juggo_w.png"
+        },
+        "says": [
+          "……",
+          "Ha ha ha ha ha ha",
+          "Ta sẽ không còn mất kiểm soát nữa."
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "itachi",
+        "name": "Uchiha Itachi",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "itachi.swf",
+          "face": "itachi.png",
+          "face_big": "itachi_b.png",
+          "face_bar": "itachi_m.png",
+          "face_win": "itachi_w.png"
+        },
+        "says": [
+          "Xuất sắc cũng có nỗi phiền muộn của nó…",
+          "Con người là thế, tự cho mình đã biết rồi thì phủ nhận những gì mình chưa biết, chỉ sống tự mãn trong phạm vi hiểu biết của mình…",
+          "Là người thì đều sống nhờ tri thức và nhận thức của mình, và cũng bị chúng trói buộc,|người ta gọi đó là thực tại.|Nhưng tri thức và nhận thức vốn mù mờ, thực tại biết đâu chỉ là hoa trong gương, trăng dưới nước."
+        ],
+        "bgm": {
+          "url": "narutoboss.mp3",
+          "rate": 90
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "deidara",
+        "name": "Deidara",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "deidara.swf",
+          "face": "deidara.png",
+          "face_big": "deidara_b.png",
+          "face_bar": "deidara_m.png",
+          "face_win": "deidara_w.png"
+        },
+        "says": [
+          "Nghệ thuật chính là sự bùng nổ! Ừ.",
+          "Nhẫn thuật của tôi toàn là nghệ thuật! Ừ.",
+          "Nghệ thuật đẹp mà mong manh, khoảnh khắc biến mất mới được gọi là đẹp, ừ."
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "kakashi",
+        "name": "Hatake Kakashi",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "kakashi.swf",
+          "face": "kakashi.png",
+          "face_big": "kakashi_b.png",
+          "face_bar": "kakashi_m.png",
+          "face_win": "kakashi_w.png"
+        },
+        "says": [
+          "Ninja mà, không thể nghĩ theo lẽ thường được!",
+          "Yên tâm, có chết tôi cũng sẽ bảo vệ các người, tôi tuyệt đối không để đồng đội bị giết.",
+          "Với hiện trạng bây giờ mày thắng nổi tao đâu, mày có hiểu gì về sức mạnh thật sự đâu!"
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "kakashi_kamui",
+        "name": "Hatake Kakashi Kamui",
+        "comic_type": 1,
+        "start_frame": 2,
+        "urls": {
+          "file": "kakashi.swf",
+          "face": "kakashi_kamui.png",
+          "face_big": "kakashi_kamui_b.png",
+          "face_bar": "kakashi_kamui_m.png",
+          "face_win": "kakashi_kamui_w.png"
+        },
+        "says": [
+          "Ninja mà, không thể nghĩ theo lẽ thường được!",
+          "Yên tâm, có chết tôi cũng sẽ bảo vệ các người, tôi tuyệt đối không để đồng đội bị giết.",
+          "Với hiện trạng bây giờ mày thắng nổi tao đâu, mày có hiểu gì về sức mạnh thật sự đâu!"
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 80
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "lee",
+        "name": "Rock Lee",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "lee.swf",
+          "face": "lee.png",
+          "face_big": "lee_b.png",
+          "face_bar": "lee_m.png",
+          "face_win": "lee_w.png"
+        },
+        "says": [
+          "Ta chính là con thú lam biếc tuyệt đẹp của Konoha — Rock Lee!",
+          "Giờ chính là lúc tôi thực hiện trọn vẹn nhẫn đạo của mình!",
+          "Tôi sẽ chứng minh rằng chẳng cần thể thuật hay ảo thuật vẫn có thể trở thành một ninja đáng nể!"
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "lee_domen",
+        "name": "Rock Lee Đỗ Môn",
+        "comic_type": 1,
+        "start_frame": 2,
+        "urls": {
+          "file": "lee.swf",
+          "face": "lee_domen.png",
+          "face_big": "lee_domen_b.png",
+          "face_bar": "lee_domen_m.png",
+          "face_win": "lee_w.png"
+        },
+        "says": [
+          "Ta chính là con thú lam biếc tuyệt đẹp của Konoha — Rock Lee!",
+          "Giờ chính là lúc tôi thực hiện trọn vẹn nhẫn đạo của mình!",
+          "Tôi sẽ chứng minh chẳng cần thể thuật hay ảo thuật vẫn có thể thành ninja đáng nể!"
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 80
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "neji",
+        "name": "Hyuuga Neji",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "neji.swf",
+          "face": "neji.png",
+          "face_big": "neji_b.png",
+          "face_bar": "neji_m.png",
+          "face_win": "neji_w.png"
+        },
+        "says": [
+          "Tôi chưa bao giờ nghĩ — làm Jounin là điểm dừng!",
+          "Số phận con người, từ khi chào đời đã được định sẵn.",
+          "Số phận, từ khoảnh khắc đối thủ là tôi thì đã được định đoạt."
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "gaara",
+        "name": "Gaara",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "gaara.swf",
+          "face": "gaara.png",
+          "face_big": "gaara_b.png",
+          "face_bar": "gaara_m.png",
+          "face_win": "gaara_w.png"
+        },
+        "says": [
+          "Chỉ có nhiều thế thôi à?"
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "temari",
+        "name": "Temari",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "temari.swf",
+          "face": "temari.png",
+          "face_big": "temari_b.png",
+          "face_bar": "temari_m.png",
+          "face_win": "temari_w.png"
+        },
+        "says": [
+          "Đồ ngốc!",
+          "Hừ! Yếu sạch sẽ!"
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "jiraiya",
+        "name": "Jiraiya",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "jiraiya.swf",
+          "face": "jiraiya.png",
+          "face_big": "jiraiya_b.png",
+          "face_bar": "jiraiya_m.png",
+          "face_win": "jiraiya_w.png"
+        },
+        "says": [
+          "Không phân đông tây nam bắc, khắp thiên hạ, kẻ mộng trắng trong Tam Vị triệu hồi thần cóc không ai địch nổi.",
+          "Với ninja, sống thế nào chẳng quan trọng, chết thế nào mới là điều quan trọng nhất.",
+          "Ninja nghĩa là kẻ biết nhẫn nại"
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "orochimaru",
+        "name": "Orochimaru",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "orochimaru.swf",
+          "face": "orochimaru.png",
+          "face_big": "orochimaru_b.png",
+          "face_bar": "orochimaru_m.png",
+          "face_win": "orochimaru_w.png"
+        },
+        "says": [
+          "Hiệp ước chỉ là tấm màn làm đối phương mất cảnh giác, từ giờ phút này lịch sử sẽ được viết lại",
+          "Cái hữu hình sớm muộn cũng tan vỡ, chỉ cái vô hình mới vĩnh hằng!",
+          "Đời sống của xác thịt quá ngắn ngủi, quá vô thường"
+        ],
+        "bgm": {
+          "url": "narutoboss.mp3",
+          "rate": 80
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "killerbee",
+        "name": "Killer Bee",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "killerbee.swf",
+          "face": "killerbee.png",
+          "face_big": "killerbee_b.png",
+          "face_bar": "killerbee_m.png",
+          "face_win": "killerbee_w.png"
+        },
+        "says": [
+          "Mày đúng là đồ ngốc, đúng là đồ khốn!",
+          "Yo! Bổn đại gia đây là mạnh nhất đấy! Yo!",
+          "Yo! Mày đúng là đồ ngốc, đồ khốn! Yo!…"
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "pain",
+        "name": "Pain",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "pain.swf",
+          "face": "pain.png",
+          "face_big": "pain_b.png",
+          "face_bar": "pain_m.png",
+          "face_win": "pain_w.png"
+        },
+        "says": [
+          "……"
+        ],
+        "bgm": {
+          "url": "narutoboss.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "konan",
+        "name": "Konan",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "konan.swf",
+          "face": "konan.png",
+          "face_big": "konan_b.png",
+          "face_bar": "konan_m.png",
+          "face_win": "konan_w.png"
+        },
+        "says": [
+          "……"
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "obito",
+        "name": "Uchiha Obito",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "obito.swf",
+          "face": "obito.png",
+          "face_big": "obito_b.png",
+          "face_bar": "obito_m.png",
+          "face_win": "obito_w.png"
+        },
+        "says": [
+          "Kẻ không coi trọng đồng đội, còn thua cả đồ bỏ đi!",
+          "Thực tại càng tàn khốc, lỗ hổng trong lòng càng rộng lớn.",
+          "Thế giới này chẳng còn hy vọng gì để nói, hy vọng và buông xuôi chẳng khác gì nhau,|chỉ là cái cớ đối phó mà thôi.",
+          "Tôi không là ai cả, cũng chẳng muốn trở thành ai…."
+        ],
+        "bgm": {
+          "url": "narutoboss.mp3",
+          "rate": 90
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "obito_trueColors",
+        "name": "Uchiha Obito Chân Diện",
+        "comic_type": 1,
+        "start_frame": 2,
+        "urls": {
+          "file": "obito.swf",
+          "face": "obito_trueColors.png",
+          "face_big": "obito_trueColors_b.png",
+          "face_bar": "obito_trueColors_m.png",
+          "face_win": "obito_w.png"
+        },
+        "says": [
+          "Kẻ không coi trọng đồng đội, còn thua cả đồ bỏ đi!",
+          "Thực tại càng tàn khốc, lỗ hổng trong lòng càng rộng lớn.",
+          "Thế giới này chẳng còn hy vọng gì để nói, hy vọng và buông xuôi chẳng khác gì nhau,|chỉ là cái cớ đối phó mà thôi.",
+          "Tôi không là ai cả, cũng chẳng muốn trở thành ai…."
+        ],
+        "bgm": {
+          "url": "narutoboss.mp3",
+          "rate": 90
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "madara",
+        "name": "Uchiha Madara",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "madara.swf",
+          "face": "madara.png",
+          "face_big": "madara_b.png",
+          "face_bar": "madara_m.png",
+          "face_win": "madara_w.png"
+        },
+        "says": [
+          "Tôi lúc này không còn sức mạnh, nói cách khác, giờ đây tôi chỉ là một cái vỏ rỗng.",
+          "Mọi thứ trên đời hòa làm một với ta, ta sẽ trở thành thể hoàn chỉnh thống trị tất cả.",
+          "Thần thoại được truyền lại bằng cách bắt chước sự thật.",
+          "Mọi đòn tấn công đều vô dụng trước ta, Uchiha Madara.",
+          "Thôi được, Đại chiến Ninja lần thứ tư, tại đây ta tuyên chiến với các người!",
+          "Muốn kiểm soát người khác, phải học cách lợi dụng bóng tối trong lòng họ."
+        ],
+        "bgm": {
+          "url": "narutoboss.mp3",
+          "rate": 90
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "kimimaro",
+        "name": "Kimimaro",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "kimimaro.swf",
+          "face": "kimimaro.png",
+          "face_big": "kimimaro_b.png",
+          "face_bar": "kimimaro_m.png",
+          "face_win": "kimimaro_w.png"
+        },
+        "says": [
+          "Được thôi, muốn chết theo kiểu nào?",
+          "Con người sinh ra là vì một mục đích nào đó, tôi tin chắc rằng, sống là mang theo sứ mệnh quan trọng.",
+          "Có lẽ đúng là vậy… thân thể tôi bị bệnh tật hành hạ, chẳng trụ được bao lâu… nhưng, tôi sẽ không diệt vong… và tôi đâu có đơn độc… với tư cách kẻ gánh vác một phần tham vọng của Orochimaru-sama… tôi sẽ sống mãi trong trái tim ngài…"
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "hinata",
+        "name": "Hyuuga Hinata",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "hinata.swf",
+          "face": "hinata.png",
+          "face_big": "hinata_b.png",
+          "face_bar": "hinata_m.png",
+          "face_win": "hinata_w.png"
+        },
+        "says": [
+          "Trước mặt người mình thích, em không thể… mất mặt được…",
+          "Không bao giờ bỏ cuộc, đó là nhẫn đạo của tôi.|Có gì cứ nói thẳng, đó cũng là nhẫn đạo của tôi.",
+          "Con người chẳng ai hoàn hảo… thế nên…|người ta vì nếm thất bại, mới có được sự mạnh mẽ để đứng dậy từ đó."
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "suigetsu",
+        "name": "Hoozuki Suigetsu",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "suigetsu.swf",
+          "face": "suigetsu.png",
+          "face_big": "suigetsu_b.png",
+          "face_bar": "suigetsu_m.png",
+          "face_win": "suigetsu_w.png"
+        },
+        "says": [
+          "Thứ ngươi muốn bảo vệ chẳng phải thứ ta muốn bảo vệ.",
+          "Thật mất mặt, đáng lẽ ngươi phải thở được chứ.",
+          "Ta có thứ mình muốn bảo vệ."
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "kenshin",
+        "name": "Himura Kenshin",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "kenshin.swf",
+          "face": "kenshin.png",
+          "face_big": "kenshin_b.png",
+          "face_bar": "kenshin_m.png",
+          "face_win": "kenshin_w.png"
+        },
+        "says": [
+          "Kiếm là hung khí, kiếm thuật là thủ đoạn giết người,|dù dùng thứ ngôn từ đẹp đẽ nào che giấu, thì đó vẫn là sự thật",
+          "……"
+        ],
+        "bgm": {
+          "url": "bleachboss.mp3",
+          "rate": 100
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "kenshin_slash",
+        "name": "Himura Kenshin Battousai",
+        "comic_type": 0,
+        "start_frame": 2,
+        "urls": {
+          "file": "kenshin.swf",
+          "face": "kenshin_slash.png",
+          "face_big": "kenshin_slash_b.png",
+          "face_bar": "kenshin_slash_m.png",
+          "face_win": "kenshin_slash_w.png"
+        },
+        "says": [
+          "Kiếm là hung khí, kiếm thuật là thủ đoạn giết người,|dù dùng thứ ngôn từ đẹp đẽ nào che giấu, thì đó vẫn là sự thật",
+          "Dù chỉ là một thanh kiếm, nhưng đủ để bảo vệ… những người bên cạnh tại hạ rồi.",
+          "Bấy lâu được quan tâm, vô cùng cảm tạ, tại hạ là kẻ lãng khách, lại phải… tiếp tục lên đường…",
+          "Người đã khuất muốn thấy nhất chẳng phải người thân báo thù cho mình, mà là người thân được sống hạnh phúc.",
+          "Kẻ tạo ra thời đại chẳng phải “đao”, mà là “người” dùng đao.",
+          "Tại hạ vẫn là Himura Kenshin, điều này mãi mãi không đổi!",
+          "Ta không giết người nữa, cũng không cho phép kẻ khác giết người. Chỉ cần tại hạ làm được… sẽ không để ai phải chết!",
+          "Đây chẳng phải ly biệt, mà là khởi hành; chẳng phải kết thúc, chỉ là mở đầu… có thể thấy hụt hẫng, nhưng đành chịu…",
+          "Tại hạ lúc nào cũng nghiêm túc, nếu không, đối thủ sẽ chẳng cảm thấy… lời tại hạ nói là nghiêm túc.",
+          "Ý chí sống tiếp chính là sức mạnh lớn nhất!",
+          "Đem kiếm và tâm ra đánh cược, sống trọn đời chiến đấu, đó chính là đáp án ta tìm được!"
+        ],
+        "bgm": {
+          "url": "bleachboss.mp3",
+          "rate": 100
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "random",
+        "name": null,
+        "comic_type": -1,
+        "urls": {
+          "face": "random.png"
+        }
+      },
+      {
+        "id": "random_bleach",
+        "name": null,
+        "comic_type": 0,
+        "urls": {
+          "face": "random_bleach.png"
+        }
+      },
+      {
+        "id": "random_naruto",
+        "name": null,
+        "comic_type": 1,
+        "urls": {
+          "face": "random_naruto.png"
+        }
+      },
+      {
+        "id": "xb_ninja_1",
+        "name": "Lính Ninja 1",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "xb/ninja1.swf"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "xb_ninja_2",
+        "name": "Lính Ninja Béo",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "xb/ninja2.swf"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "xb_ninja_earth1",
+        "name": "Lính Thổ Ảnh 1",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "xb/ninja_earth1.swf"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "xb_ninja_fire1",
+        "name": "Lính Hỏa Ảnh 1",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "xb/ninja_fire1.swf"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "xb_ninja_fire2",
+        "name": "Lính Hỏa Ảnh 2",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "xb/ninja_fire2.swf"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "xb_ninja_sand1",
+        "name": "Lính Phong Ảnh 1",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "xb/ninja_sand1.swf"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "xb_ninja_thunder1",
+        "name": "Lính Lôi Ảnh 1",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "xb/ninja_thunder1.swf"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "xb_bear1",
+        "name": "Gấu 1",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "xb/bear1.swf"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "xb_bird1",
+        "name": "Chim 1",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "xb/bird1.swf"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "xb_dog1",
+        "name": "Chó 1",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "xb/dog1.swf"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "xb_pig1",
+        "name": "Lợn Rừng 1",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "xb/pig1.swf"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "deidara_old",
+        "name": "Deidara (Bản cũ)",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "deidara_old.swf",
+          "face": "deidara_old.png",
+          "face_big": "deidara_old_b.png",
+          "face_bar": "deidara_old_m.png",
+          "face_win": "deidara_old_w.png"
+        },
+        "says": [
+          "Nghệ thuật chính là sự bùng nổ! Ừ.",
+          "Nhẫn thuật của tôi toàn là nghệ thuật! Ừ.",
+          "Nghệ thuật đẹp mà mong manh, khoảnh khắc biến mất mới được gọi là đẹp, ừ."
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "gaara_old",
+        "name": "Gaara (Bản cũ)",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "gaara_old.swf",
+          "face": "gaara_old.png",
+          "face_big": "gaara_old_b.png",
+          "face_bar": "gaara_old_m.png",
+          "face_win": "gaara_old_w.png"
+        },
+        "says": [
+          "Chỉ có nhiều thế thôi à?"
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "itachi_old",
+        "name": "Uchiha Itachi (Bản cũ)",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "itachi_old.swf",
+          "face": "itachi_old.png",
+          "face_big": "itachi_old_b.png",
+          "face_bar": "itachi_old_m.png",
+          "face_win": "itachi_old_w.png"
+        },
+        "says": [
+          "Xuất sắc cũng có nỗi phiền muộn của nó…",
+          "Con người là thế, tự cho mình đã biết rồi thì phủ nhận những gì mình chưa biết, chỉ sống tự mãn trong phạm vi hiểu biết của mình…",
+          "Là người thì đều sống nhờ tri thức và nhận thức của mình, và cũng bị chúng trói buộc,|người ta gọi đó là thực tại.|Nhưng tri thức và nhận thức vốn mù mờ, thực tại biết đâu chỉ là hoa trong gương, trăng dưới nước."
+        ],
+        "bgm": {
+          "url": "narutoboss.mp3",
+          "rate": 90
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "pain_old",
+        "name": "Pain (Bản cũ)",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "pain_old.swf",
+          "face": "pain_old.png",
+          "face_big": "pain_old_b.png",
+          "face_bar": "pain_old_m.png",
+          "face_win": "pain_old_w.png"
+        },
+        "says": [
+          "……"
+        ],
+        "bgm": {
+          "url": "narutoboss.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "sasuke_susanoo_old",
+        "name": "Uchiha Sasuke Susanoo (Bản cũ)",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "sasuke_susanoo_old.swf",
+          "face": "sasuke_susanoo.png",
+          "face_big": "sasuke_susanoo_old_b.png",
+          "face_bar": "sasuke_susanoo_old_m.png",
+          "face_win": "sasuke_susanoo_old_w.png"
+        },
+        "says": [
+          "Ràng buộc quá nhiều, chỉ khiến ta lạc mất chính mình.",
+          "Cô đơn, đâu phải nỗi buồn vì bị cha mẹ trách mắng có thể sánh được.",
+          "Ta là kẻ báo thù, sinh ra để báo thù, vì sự báo thù ta có thể từ bỏ tất cả."
+        ],
+        "bgm": {
+          "url": "character/sasuke.mp3",
+          "rate": 90
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "obito_old",
+        "name": "Uchiha Obito (Bản cũ)",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "obito_old.swf",
+          "face": "obito_old.png",
+          "face_big": "obito_old_b.png",
+          "face_bar": "obito_old_m.png",
+          "face_win": "obito_old_w.png"
+        },
+        "says": [
+          "Kẻ không coi trọng đồng đội, còn thua cả đồ bỏ đi!",
+          "Thực tại càng tàn khốc, lỗ hổng trong lòng càng rộng lớn.",
+          "Thế giới này chẳng còn hy vọng gì để nói, hy vọng và buông xuôi chẳng khác gì nhau,|chỉ là cái cớ đối phó mà thôi.",
+          "Tôi không là ai cả, cũng chẳng muốn trở thành ai…."
+        ],
+        "bgm": {
+          "url": "narutoboss.mp3",
+          "rate": 90
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "naruto_hermit_old",
+        "name": "Uzumaki Naruto (Bản cũ)",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "naruto_hermit_old.swf",
+          "face": "naruto_hermit_old.png",
+          "face_big": "naruto_hermit_old_b.png",
+          "face_bar": "naruto_hermit_old_m.png",
+          "face_win": "naruto_hermit_old_w.png"
+        },
+        "says": [
+          "Chỉ cần mày trở thành ninja tuyệt nhất được cả làng công nhận,|mày sẽ có quyền giành lấy hai chữ Hokage!",
+          "Tao tuyệt đối không bỏ cuộc, vì đó chính là nhẫn đạo của tao!",
+          "Được! Tao quyết định rồi, tao sẽ đi con đường nhẫn đạo của riêng mình,|mạnh mẽ bước tiếp trên con đường không bao giờ để mình hối hận!"
+        ],
+        "bgm": {
+          "url": "character/naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "juggo_old",
+        "name": "Jugo (Bản cũ)",
+        "comic_type": 1,
+        "start_frame": 1,
+        "urls": {
+          "file": "juggo_old.swf",
+          "face": "juggo_old.png",
+          "face_big": "juggo_old_b.png",
+          "face_bar": "juggo_old_m.png",
+          "face_win": "juggo_old_w.png"
+        },
+        "says": [
+          "……",
+          "Ha ha ha ha ha ha",
+          "Ta sẽ không còn mất kiểm soát nữa."
+        ],
+        "bgm": {
+          "url": "naruto.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "byakuya_bankai_old",
+        "name": "Kuchiki Byakuya Bankai (Bản cũ)",
+        "comic_type": 0,
+        "start_frame": 2,
+        "urls": {
+          "file": "byakuya_old.swf",
+          "face": "byakuya_bankai_old.png",
+          "face_big": "byakuya_bankai_old_b.png",
+          "face_bar": "byakuya_bankai_old_m.png",
+          "face_win": "byakuya_w.png"
+        },
+        "says": [
+          "Chậm chạp thật. Ngã xuống cũng chậm chạp thế.",
+          "Ồ… thật không ngờ một thường dân cũng hiểu được cảm giác của quý tộc.",
+          "Như mày mà chết dưới Bankai của tao? Còn sớm hơn một nghìn năm đấy!",
+          "Chúng ta không nên rơi lệ, với nội tâm mà nói đó ngang với thất bại của thân thể,|điều đó chỉ chứng minh việc chúng ta có trái tim vốn là thừa thãi.",
+          "Đừng để bị “trái tim” mê hoặc, vì đôi khi nó biết nói dối."
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 80
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "ulquiorra_old",
+        "name": "Ulquiorra Cifer (Bản cũ)",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "ulquiorra_old.swf",
+          "face": "ulquiorra_old.png",
+          "face_big": "ulquiorra_old_b.png",
+          "face_bar": "ulquiorra_old_m.png",
+          "face_win": "ulquiorra_old_w.png"
+        },
+        "says": [
+          "Mặt trời đã bị chúng ta hạ xuống rồi.",
+          "Không gì có thể lọt khỏi đôi mắt của ta.",
+          "Loài người, đến cuối cùng vẫn là sinh vật đầy bất ngờ."
+        ],
+        "bgm": {
+          "url": "bleachboss.mp3",
+          "rate": 90
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "soifon_old",
+        "name": "Soi Fon (Bản cũ)",
+        "comic_type": 0,
+        "start_frame": 1,
+        "urls": {
+          "file": "soifon_old.swf",
+          "face": "soifon_old.png",
+          "face_big": "soifon_b.png",
+          "face_bar": "soifon_m.png",
+          "face_win": "soifon_w.png"
+        },
+        "says": [
+          "Cái bóng của mày tựa như… những kim độc không phương hướng… khâu kín con đường đi của ta.",
+          "Ánh sáng của mày tựa như… tia sét khẽ chạm tháp nước… cắt đứt nguồn sống của ta."
+        ],
+        "bgm": {
+          "url": "bleach.mp3",
+          "rate": 70
+        },
+        "hasWarning": true
+      }
+    ]
+  }
+}

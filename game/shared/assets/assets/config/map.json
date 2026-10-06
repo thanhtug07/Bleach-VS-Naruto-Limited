@@ -1,0 +1,112 @@
+{
+  "map": {
+    "path": {
+      "map": "map/",
+      "bgm": "bgm/"
+    },
+    "data": [
+      {
+        "id": "random",
+        "name": "Bản đồ ngẫu nhiên",
+        "img": "random.png"
+      },
+      {
+        "id": "xianshi",
+        "name": "Giới Hiện",
+        "img": "xianshi.png",
+        "file": "xianshi.swf",
+        "bgm": "city.mp3"
+      },
+      {
+        "id": "liuhunjie",
+        "name": "Phố Rukongai",
+        "bgm": "village.mp3"
+      },
+      {
+        "id": "jingyantin",
+        "name": "Tĩnh Linh Đình",
+        "bgm": "wind.mp3"
+      },
+      {
+        "id": "shuangji",
+        "name": "Đồi Sokyoku",
+        "bgm": "wind.mp3"
+      },
+      {
+        "id": "shihunjietongdao",
+        "name": "Đường Hầm Thi Hồn Giới",
+        "bgm": "shandong.mp3"
+      },
+      {
+        "id": "jianchang",
+        "name": "Mộ Zanpakuto",
+        "bgm": "wind.mp3"
+      },
+      {
+        "id": "zoulang",
+        "name": "Đội 13 Gotei",
+        "bgm": "village.mp3"
+      },
+      {
+        "id": "neixin",
+        "name": "Thế Giới Nội Tâm",
+        "bgm": "wind.mp3"
+      },
+      {
+        "id": "muyecun",
+        "name": "Làng Lá Konoha",
+        "bgm": "village.mp3"
+      },
+      {
+        "id": "wenquan",
+        "name": "Suối Nước Nóng",
+        "bgm": "water.mp3"
+      },
+      {
+        "id": "pubu",
+        "name": "Thác Hokage",
+        "bgm": "pubu.mp3"
+      },
+      {
+        "id": "louding",
+        "name": "Nóc Nhà",
+        "bgm": "wind.mp3"
+      },
+      {
+        "id": "yuzhibocun",
+        "name": "Làng Uchiha",
+        "bgm": "village.mp3"
+      },
+      {
+        "id": "senlin",
+        "name": "Rừng Rậm",
+        "bgm": "wind.mp3"
+      },
+      {
+        "id": "wuyingcun",
+        "name": "Làng Sương Mù",
+        "bgm": "village.mp3"
+      },
+      {
+        "id": "desert",
+        "name": "Sa Mạc",
+        "bgm": "wind.mp3"
+      },
+      {
+        "id": "mountain",
+        "name": "Núi Lớn",
+        "bgm": "wind.mp3"
+      },
+      {
+        "id": "snow",
+        "name": "Đất Tuyết",
+        "bgm": "wind.mp3"
+      },
+      {
+        "id": "woods",
+        "name": "Rừng Cây",
+        "bgm": "wind.mp3"
+      }
+    ]
+  }
+}

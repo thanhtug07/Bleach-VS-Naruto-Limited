@@ -1,0 +1,37 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="#链接/MC_country" itemID="6948adf5-0000039a" linkageExportForAS="true" linkageClassName="$language$MC_country" lastModified="1766370805">
+  <timeline>
+    <DOMTimeline name="MC_country">
+      <layers>
+        <DOMLayer name="进度" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="进度遮罩" name="p" centerPoint3DX="23.5" centerPoint3DY="0.5">
+                  <matrix>
+                    <Matrix d="0.03125"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="23.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="图层_1" color="#00FFFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="国旗" name="c">
+                  <transformationPoint>
+                    <Point x="25" y="18"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

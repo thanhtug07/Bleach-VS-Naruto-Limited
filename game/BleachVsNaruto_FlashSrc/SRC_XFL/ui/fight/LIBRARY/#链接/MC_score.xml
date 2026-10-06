@@ -1,0 +1,41 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="#链接/MC_score" itemID="6944df44-0000012b" linkageExportForAS="true" linkageClassName="$fight$MC_score" lastModified="1766121284" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="MC_score">
+      <layers>
+        <DOMLayer name="图层 2" color="#9933CC" current="true" isSelected="true" layerType="guide">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="#链接/txtmc_score" centerPoint3DX="76.7" centerPoint3DY="11.75">
+                  <matrix>
+                    <Matrix tx="60.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.75" y="11.75"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="图层 1" color="#4FFF4F">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="scoretxt.png"/>
+                <DOMSymbolInstance libraryItemName="ctmc" name="ct">
+                  <matrix>
+                    <Matrix tx="61.55" ty="0.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,547 @@
+{
+  "txt": {
+    "options": {
+      "enable": "Bật",
+      "disable": "Tắt"
+    },
+    "asset_manager": {
+      "sound": "Âm thanh",
+      "effect": "Hiệu ứng",
+      "font": "Font chữ",
+      "bitmap": "Ảnh bitmap"
+    },
+    "game_loader": {
+      "fighter_id_error": "Lỗi ID nhân vật!",
+      "assister_id_error": "Lỗi ID trợ thủ!",
+      "map_id_error": "Lỗi ID bản đồ!",
+      "load_swf_error": "Lỗi tải file SWF!"
+    },
+    "game_stage_load_ctrl": {
+      "map": "Bản đồ",
+      "fighter": "Nhân vật",
+      "assistant": "Trợ thủ",
+      "bgm": "Nhạc nền",
+      "loading_no_name": "Đang tải [{itemName}] ({step}/{stepLength})",
+      "loading_has_name": "Đang tải [{itemName}] : {loadName} ({step}/{stepLength})"
+    },
+    "game_data": {
+      "load_fighter_fail": "Tải dữ liệu nhân vật thất bại!",
+      "load_assistant_fail": "Tải dữ liệu trợ thủ thất bại!",
+      "load_select_fail": "Tải dữ liệu màn chọn thất bại!",
+      "load_map_fail": "Tải dữ liệu bản đồ thất bại!",
+      "load_mission_fail": "Tải dữ liệu màn chơi thất bại!",
+      "load_musou_fail": "Tải dữ liệu Musou thất bại!"
+    },
+    "game_interface": {
+      "team_play": "Chơi đội",
+      "team_play_acrade": "Vượt màn",
+      "team_play_vs_people": "2 Người đấu",
+      "team_play_vs_CPU": "Đấu với máy",
+      "team_play_watch": "Xem máy đấu",
+      "single_play": "Chơi đơn",
+      "single_play_acrade": "Vượt màn",
+      "single_play_vs_people": "2 Người đấu",
+      "single_play_vs_CPU": "Đấu với máy",
+      "single_play_watch": "Xem máy đấu",
+      "musou_play": "Chế độ Musou",
+      "musou_acrade": "Chế độ Musou",
+      "option": "Cài đặt",
+      "training": "Luyện tập",
+      "credits": "Nhóm làm game",
+      "more_games": "Game khác"
+    },
+    "common": {
+      "continue": "Chơi tiếp",
+      "move_list": "Bảng đòn",
+      "back": "Quay lại",
+      "apply": "Áp dụng",
+      "cancel": "Hủy",
+      "yes": "Có",
+      "no": "Không",
+      "set_all": "Cài tất cả",
+      "set_default": "Khôi phục phím mặc định"
+    },
+    "pause_dialog": {
+      "game_title": "Về màn hình chính"
+    },
+    "musou_pause_dialog": {
+      "back_map": "Về bản đồ lớn"
+    },
+    "lan_exit_dialog": {
+      "exit": "Thoát chơi mạng"
+    },
+    "set_btn_group": {
+      "p1_key_set": "Cài phím Người chơi 1",
+      "p2_key_set": "Cài phím Người chơi 2",
+      "com_level": "Độ khó của máy",
+      "com_level_very_easy": "Rất dễ",
+      "com_level_easy": "Dễ",
+      "com_level_normal": "Thường",
+      "com_level_hard": "Khó",
+      "com_level_very_hard": "Rất khó",
+      "com_level_hell": "Địa ngục",
+      "operate_mode": "Chế độ thao tác",
+      "operate_normal": "Kiểu thường",
+      "operate_classic": "Kiểu cổ điển",
+      "life": "Máu",
+      "time": "Thời gian đấu",
+      "time_30": "30 giây",
+      "time_60": "60 giây",
+      "time_90": "90 giây",
+      "time_unlimited": "Không giới hạn",
+      "sound": "Hiệu ứng âm thanh",
+      "bgm": "Nhạc nền",
+      "quality": "Chất lượng đồ họa",
+      "quality_low": "Thấp",
+      "quality_medium": "Vừa",
+      "quality_high": "Cao",
+      "quality_best": "Cao nhất",
+      "show_hp": "Hiện máu",
+      "hp_show": "Hiện",
+      "hp_hide": "Ẩn",
+      "p1_joystick_set": "Cài tay cầm Người chơi 1",
+      "p2_joystick_set": "Cài tay cầm Người chơi 2"
+    },
+    "joy_stick_set_ui": {
+      "none": "Không dùng",
+      "use_joy": "Gắn tay cầm",
+      "buy_joy": "Mua tay cầm khuyên dùng",
+      "key_up2": "Lên (cần analog)",
+      "key_down2": "Xuống (cần analog)",
+      "key_left2": "Trái (cần analog)",
+      "key_right2": "Phải (cần analog)",
+      "key_up": "Lên (nút)",
+      "key_down": "Xuống (nút)",
+      "key_left": "Trái (nút)",
+      "key_right": "Phải (nút)",
+      "key_attack": "Tấn công",
+      "key_jump": "Nhảy",
+      "key_dash": "Lướt",
+      "key_skill": "Kỹ năng",
+      "key_super_skill": "Đại kỹ",
+      "key_special": "Đặc biệt",
+      "key_waikai": "Bankai",
+      "key_back": "Phím quay lại",
+      "key_select": "Phím xác nhận (menu)"
+    },
+    "set_ctrl_btn_ui": {
+      "key_up": "Lên",
+      "key_down": "Xuống",
+      "key_left": "Trái",
+      "key_right": "Phải",
+      "key_attack": "Tấn công",
+      "key_jump": "Nhảy",
+      "key_dash": "Lướt",
+      "key_skill": "Kỹ năng",
+      "key_super_kill": "Đại kỹ",
+      "key_special": "Đặc biệt"
+    },
+    "set_btn_dialog": {
+      "push_key": "Nhấn một phím để cài [{name}]"
+    },
+    "game_loading_stage": {
+      "prepare": "Khởi tạo game: chuẩn bị tài nguyên",
+      "loading_config": "Khởi tạo game: đang tải file cấu hình",
+      "prepare_fail": "Khởi tạo game thất bại: chuẩn bị tài nguyên thất bại!",
+      "config_fail": "Khởi tạo game thất bại: tải file cấu hình thất bại!",
+      "loading_assets": "Khởi tạo game: đang tải tài nguyên",
+      "loading_step": "Khởi tạo game: đang tải tài nguyên {itemName} ({step}/{totalStep})"
+    },
+    "credits_stage": {
+      "body": "Nguyên tác: <a href='event:myEvent'>剑jian</a><br>Kế hoạch: 数字化流天、L、社长、Diazynez<br>Lập trình: Nagisa、Diazynez、BearBrine、パチュリー<br>Mỹ thuật: 数字化流天、L、V.临界幻想、小数、Azreal、影、赤炎、小海、主流、曦城子、酸菜鱼、<br>          卡布托、Future、Nagisa、惊鸿、杯梓、星空幻梦、花里、Just...<br>Kiểm thử: ゞ影孞&僮畵ヾ、成环、cat232181、无宇逆风、叽咕村夫、默默、小皮、山之叟、欲上天、<br>          LOTTU、肥宅正品、ppx、七米、星空幻梦、逝时_流光...<br>Đóng góp: 灰原·银、Grimm (phát hành WEB)<br>Kết nối: Lemon_kenbai、黑羽、诺斯给给...<br>Vận hành: 多情丶回忆、FZCL石头门、纯白暮弦、风之旅人、寒窗听雨、黑猫、老秦、凌辰夜风、<br>          萌新、某个热爱理科的死宅、天双、御礼...<br>"
+    },
+    "game_interface_manager": {
+      "joy_set": "Cài nút bấm",
+      "screen_mode": "Chế độ màn hình",
+      "screen_fill": "Kéo giãn",
+      "screen_ratio": "Giữ tỉ lệ",
+      "credits_footer": "Gửi: <a href=\"{url}\" target=\"_blank\">{label}</a><br/>Trang chủ: <a href=\"http://www.1212321.com/\" target=\"_blank\">www.1212321.com</a>    Diễn đàn: <a href=\"http://bbs.1212321.com/\" target=\"_blank\">bbs.1212321.com</a><br/>Email: 5dplay@qun.mail.163.com (đang tuyển người)<br/>",
+      "lan_play": "Đấu mạng LAN",
+      "exit": "Thoát game",
+      "joystick_set": "Cài tay cầm",
+      "display_mode": "Chế độ hiển thị",
+      "display_fullscreen": "Toàn màn hình",
+      "display_window": "Cửa sổ"
+    },
+    "set_screen_btn_view": {
+      "preinstall": "Vị trí preset",
+      "type_1": "Kiểu 1",
+      "type_2": "Kiểu 2",
+      "alpha": "Độ trong suốt nút",
+      "sp_skill": "Phím tất sát",
+      "wankai": "Phím Bankai",
+      "special": "Phím trợ thủ/linh bạo/thế thân",
+      "auto_show": "Tự hiện/ẩn",
+      "always_show": "Luôn hiện",
+      "custom": "Tự chỉnh",
+      "apply": "Đồng ý"
+    },
+    "lan_host_create_dialog": {
+      "game_mode": "Chế độ chơi",
+      "game_mode_team": "Đội",
+      "game_mode_single": "Đơn",
+      "game_time": "Thời gian hiệp",
+      "hp": "Máu nhân vật",
+      "host_name_label": "Tên phòng: ",
+      "mode_team_combo": "TEAM VS - Chế độ đội"
+    },
+    "host_vo": {
+      "mode_team": "TEAM VS - Đấu đội",
+      "mode_single": "SINGLE VS - Đấu đơn",
+      "full": "(Đầy)"
+    },
+    "lan_server_ctrl": {
+      "room_full": "Phòng đã đầy",
+      "player_entering": "{name} đang vào phòng...",
+      "player_exit_chat": "{name} đã rời phòng",
+      "kick_chat": "Đã mời {name} ra khỏi phòng",
+      "player_enter": "{name} đã vào phòng",
+      "kick_out": "Bạn đã bị mời ra khỏi phòng"
+    },
+    "lan_game_state": {
+      "join": "Vào game",
+      "create": "Tạo game",
+      "profile": "Thông tin cá nhân",
+      "exit": "Thoát"
+    },
+    "host_detail_dialog": {
+      "game_mode": "Chế độ chơi: {mode}",
+      "create_time": "Thời gian tạo: {time}"
+    },
+    "host_list_dialog": {
+      "page_suffix": "Trang {page}"
+    },
+    "lan_room_state": {
+      "password": "Mật khẩu: {password}",
+      "start_countdown": "Bắt đầu sau {sec} giây"
+    }
+  },
+  "alert": {
+    "musou_ctrl": {
+      "need_more_money_title": "NEED MORE MONEY",
+      "need_more_money": "Xu hiện tại không đủ, còn cần {amount} xu!"
+    },
+    "world_map": {
+      "not_open_title": "NOT OPEN",
+      "not_open": "Chưa mở"
+    },
+    "joy_stick_set_ui": {
+      "no_joystick_title": "NO JOYSTICK CONNECT",
+      "no_joystick": "Không phát hiện tay cầm khả dụng",
+      "set_default_ok_title": "SET JOYSTICK DEFAULT SUCCESS",
+      "set_default_ok": "Đã đặt về phím mặc định"
+    },
+    "coin_ui": {
+      "money_title": "MONEY",
+      "money": "Nhận được {amount} xu!"
+    },
+    "menu_stage": {
+      "update_title": "UPDATE"
+    },
+    "lan_client_ctrl": {
+      "disconnect_title": "DISCONNECT",
+      "disconnect_error": "Đã xảy ra lỗi",
+      "disconnect_host": "Đã mất kết nối với chủ phòng",
+      "connection_interrupt": "Kết nối bị gián đoạn"
+    },
+    "lan_server_ctrl": {
+      "player_exit_title": "PLAYER EXIT",
+      "player_exit": "Người chơi đã rời phòng"
+    },
+    "update_ctrl": {
+      "force_update": "Phiên bản của bạn quá cũ, hãy cập nhật!"
+    },
+    "input_name_title": "FAIL",
+    "input_name": "Hãy nhập tên",
+    "password_incorrect_title": "FAIL",
+    "password_incorrect": "Mật khẩu sai",
+    "exit_title": "EXIT",
+    "input_host_name_title": "ERROR",
+    "input_host_name": "Hãy nhập tên phòng",
+    "failed_title": "FAILED"
+  },
+  "confirm": {
+    "musou_ctrl": {
+      "unlock_fighter_title": "CONFIRM",
+      "unlock_fighter": "Dùng {amount} xu để mở nhân vật?"
+    },
+    "world_map": {
+      "next_mission_title": "CONFIRM",
+      "next_mission": "Qua màn tiếp theo?",
+      "next_mission_all_finish": "Đã qua hết các màn, có vào màn cuối cùng không?",
+      "exit_title": "EXIT",
+      "exit": "Về menu chính?"
+    },
+    "common": {
+      "back_menu_title": "BACK TITLE?",
+      "back_menu": "Về menu chính?"
+    },
+    "musou_pause_dialog": {
+      "back_map_title": "BACK MAP?",
+      "back_map": "Về bản đồ lớn?"
+    },
+    "update_ctrl": {
+      "optional_update": "Có bản mới, cập nhật không? {info}",
+      "update_info_prefix": "\nNội dung cập nhật: {detail}"
+    },
+    "set_screen_btn_view": {
+      "lose_custom_title": "Custom already set, are you sure ?",
+      "lose_custom": "Nút tự chỉnh đã được đặt, đổi mục này sẽ mất cài đặt nút tự chỉnh, chắc chắn đổi?"
+    },
+    "exit_game_title": "EXIT GAME",
+    "exit_game": "Thoát game?"
+  },
+  "debug": {
+    "trace": {
+      "prefix": "* Theo dõi : ",
+      "data": {
+        "asset_manager": {
+          "load_sound_fail": "Tải âm thanh [{url}] thất bại!",
+          "load_swf_fail": "Tải SWF [{url}] thất bại!",
+          "load_font_bitmap_fail": "Tải ảnh font [{url}] thất bại!",
+          "load_font_xml_fail": "Tải XML font [{url}] thất bại!"
+        },
+        "game_loader": {
+          "fighter_id_error": "GameLoader.loadAndCacheFighter:: nhân vật [{fighterId}] không tồn tại!",
+          "fighter_load_error": "Lỗi khi tải nhân vật: {error}",
+          "assister_id_error": "GameLoader.loadAssister:: trợ thủ [{fighterId}] không tồn tại!",
+          "map_id_error": "GameLoader.loadMap:: bản đồ [{mapId}] không tồn tại!",
+          "unload_cache_error": "GameLoader.dispose:: lỗi xả cache: {error}"
+        },
+        "game_logic": {
+          "map_null": "Bản đồ rỗng!",
+          "set_game_mode": "Đặt chế độ chơi thành: {mode}"
+        },
+        "sound_ctrl": {
+          "load_fight_bgm_fail": "SoundCtrl.loadFightBGM:: tải âm thanh [{url}] thất bại!"
+        },
+        "game_ctrl": {
+          "cleared": "Đã phá đảo!",
+          "next": "Màn kế tiếp...",
+          "continue": "Chơi tiếp?",
+          "back_select": "Về màn chọn nhân vật...",
+          "time_over": "Hết giờ!",
+          "current_mode": "Chế độ hiện tại: {mode}"
+        },
+        "game_stage_load_ctrl": {
+          "load_all_finish": "Đã tải xong tất cả tài nguyên!"
+        },
+        "musou_ctrl": {
+          "wave_end": "Hết đợt!",
+          "wave_next": "Đợt tiếp theo...",
+          "time_over": "Hết giờ chế độ Musou!",
+          "time_over_complete": "Đã xong sự kiện onTimeOver chế độ Musou!",
+          "self_die": "Nhân vật chế độ Musou đã chết!",
+          "self_die_complete": "Đã xong sự kiện onSelfDead chế độ Musou!",
+          "mission_complete": "Đã xong nhiệm vụ chế độ Musou!",
+          "mission_complete_complete": "Đã xong sự kiện missionComplete chế độ Musou!",
+          "show_fzqi": "Năng lượng trợ thủ (FZQI) ======================= fzqi: {fzqi}, fzqiMax: {fzqiMax}",
+          "boss_die": "BOSS chế độ Musou đã chết!"
+        },
+        "musou_enemy_bar_ctrl": {
+          "remove_bar_error": "Lỗi xóa thanh máu địch!"
+        },
+        "musou_logic": {
+          "open_map_area": "Mở vùng khám phá bản đồ: {areaId}"
+        },
+        "fighter_vo": {
+          "undefined_bgm": "FighterVO.initByXML:: đối tượng nhân vật ID {fighterId} chưa định nghĩa nhạc nền!"
+        },
+        "game_data": {
+          "load_select_error": "Lỗi tải dữ liệu màn chọn!"
+        },
+        "mission_model": {
+          "p1_data": "Dữ liệu Người chơi 1: {data}",
+          "p2_data": "Dữ liệu Người chơi 2: {data}",
+          "mission_all_over": "Đã xong tất cả các màn!"
+        },
+        "musou_fighter_model": {
+          "repeat_add": "MusouFighterModel.addFighter:: nhân vật bị thêm trùng: {fighterId}"
+        },
+        "musou_model": {
+          "load_area": "Đang tải khu vực: {areaUrl}",
+          "init_map_area": "Khởi tạo khu vực bản đồ: {areaId}"
+        },
+        "musou_game_run_data_vo": {
+          "main": "Đã tạo đối tượng MusouGameRunDataVO mới"
+        },
+        "musou_fighter_vo": {
+          "level_up": "=============== Lên cấp! ==============="
+        },
+        "musou_player_data": {
+          "init_map": "Đang khởi tạo bản đồ..."
+        },
+        "debugger": {
+          "error_msg": "Debugger.errorMsg:: thông tin xuất ra: {message}"
+        },
+        "debug_util": {
+          "debug_position": "DebugUtil.debugPosition:: lỗi debug vị trí!"
+        },
+        "fighter_mc": {
+          "keyframe_not_exist": "Keyframe không tồn tại: {name}"
+        },
+        "fighter_action_logic": {
+          "enabled_failed": "FighterActionLogic.enabled:: bật thất bại: {error}"
+        },
+        "fighter_ctrler": {
+          "set_ctrler_fail": "Cài ctrler thất bại!"
+        },
+        "set_ctrl_btn_ui": {
+          "key_mc_missing": "mc[k{index}] không tồn tại!"
+        },
+        "joy_sticker": {
+          "platform_unsupported": "Nền tảng này không hỗ trợ tay cầm!"
+        },
+        "game_loading_stage": {
+          "progress_over_100": "{where}:: tiến độ vượt 100%"
+        },
+        "select_fighter_stage": {
+          "start_game": "Bắt đầu game",
+          "init_fighter": "Khởi tạo chọn nhân vật",
+          "init_assist": "Khởi tạo chọn trợ thủ",
+          "select_map": "Chọn bản đồ"
+        },
+        "root_sprite": {
+          "current_font": "Font hiện tại: {fontName}"
+        },
+        "udp_socket": {
+          "broadcast_fail": "Lỗi lấy địa chỉ broadcast!"
+        },
+        "lan_room_state": {
+          "player_exists": "player: {id} đã tồn tại!"
+        }
+      }
+    },
+    "log": {
+      "prefix": "* Nhật ký : ",
+      "data": {
+        "game_loader": {
+          "load_swf_error": "GameLoader.loadSWF:: lỗi tải file SWF: {url}"
+        },
+        "game_ctrl": {
+          "team_null": "GameCtrl.addGameSprite:: biến '{name}' rỗng!"
+        },
+        "game_main_logic_ctrler": {
+          "render_game_sprite": "GameMainLogicCtrl.renderGameSprite:: {error}"
+        },
+        "game_loading_stage": {
+          "preload_fail": "Khởi tạo game thất bại: chuẩn bị tài nguyên thất bại: {error}",
+          "config_fail": "Khởi tạo game thất bại: tải file cấu hình thất bại: {error}"
+        },
+        "select_fighter_stage": {
+          "fighter_data_missing": "SelectFighterStage.addFighterItem:: không thấy dữ liệu nhân vật: {fighterId}",
+          "pos_undefined": "pos chưa định nghĩa {psn}{posSN}",
+          "pos_x_oob": "pos.x vượt giới hạn {detail}",
+          "pos_y_oob": "pos.y vượt giới hạn {detail}"
+        },
+        "fighter_effect_ctrl": {
+          "undefined_bisha": "Chưa định nghĩa cut-in đặc biệt: {id}"
+        }
+      }
+    },
+    "error": {
+      "prefix": "* Lỗi : ",
+      "data": {
+        "game_ctrl": {
+          "build_game_fail": "Dựng game thất bại!"
+        },
+        "game_stage_load_ctrl": {
+          "not_find_main_mc": "Trong [{fileUrl}] không thấy linh kiện tên {mainMc}!",
+          "get_map_data_fail": "Lỗi lấy dữ liệu Bản đồ!",
+          "get_fighter_data_fail": "Lỗi lấy dữ liệu Nhân vật!",
+          "get_assistant_data_fail": "Lỗi lấy dữ liệu Trợ thủ!"
+        },
+        "musou_ctrl": {
+          "build_game_fail": "Dựng game thất bại!"
+        },
+        "game_data": {
+          "verify_select_fail": "Kiểm tra {file} thất bại! Thông tin lỗi: [{message}]",
+          "verify_mission_fail": "Kiểm tra {file} thất bại! Thông tin lỗi: [{message}]",
+          "verify_musou_fail": "Kiểm tra dữ liệu Musou [{musouId}] thất bại! Không thấy dữ liệu {type} liên quan: [{value}]",
+          "verify_fighter_model_fail": "Kiểm tra dữ liệu FighterModel thất bại! Thông tin lỗi: [{message}]"
+        },
+        "musou_mission_vo": {
+          "init_musou_stage_fail": "Khởi tạo màn Musou thất bại!"
+        },
+        "assister": {
+          "init_fail": "Khởi tạo thất bại! Hàm chưa định nghĩa {functionName}"
+        },
+        "bullet": {
+          "do_hit": "Nhảy tới frame [{frame}] thất bại!"
+        },
+        "fighter_attacker": {
+          "unsupported_type": "Kiểu không hỗ trợ!"
+        },
+        "fighter_main": {
+          "main_mc_is_null": "Tạo nhân vật thất bại! mainMc rỗng!",
+          "fighter_ctrler_initialized": "fighter đã khởi tạo xong!"
+        },
+        "fighter_mc": {
+          "render_animate": "FighterMC.renderAnimate:: lỗi render: {stackTrace}",
+          "go_frame": "FighterMC.goFrame:: lỗi render: {stackTrace}",
+          "render_children": "FighterMC.renderChildren:: lỗi render: {stackTrace}"
+        },
+        "language_stage": {
+          "element_count_mismatch": "Số lượng phần tử ngôn ngữ không khớp!",
+          "unsupported_language": "Ngôn ngữ không hỗ trợ!"
+        },
+        "game_camera": {
+          "zoom_invalid": "zoom không được <= 0!"
+        },
+        "game_stage": {
+          "camera_already_init": "Camera game đã khởi tạo!"
+        },
+        "res_utils": {
+          "init_in_progress": "Đang khởi tạo, không thể khởi tạo lần nữa!",
+          "swf_lib_not_init": "Chưa khởi tạo SwfLib!",
+          "not_initialized": "Chưa khởi tạo!"
+        },
+        "embed_swf_asset_util": {
+          "init_in_progress": "Đang khởi tạo, không thể khởi tạo lần nữa!",
+          "not_initialized": "Chưa khởi tạo!"
+        },
+        "embed_swf": {
+          "no_movie_clip_data": "Không thấy movieClipData của swf!"
+        },
+        "selecter_item_ui": {
+          "select_vo_unset": "Chưa đặt selectVO!"
+        },
+        "ad_event_listener": {
+          "already_listen": "{action} đã nghe, chỉ hỗ trợ nghe một lần!"
+        },
+        "ad_group": {
+          "add_ad_first": "add ad first!"
+        }
+      }
+    }
+  },
+  "dev": {
+    "txt": {
+      "fighter_tester": {
+        "p1_fighter_id": "ID nhân vật Người chơi 1",
+        "p1_assistant_id": "ID trợ thủ Người chơi 1",
+        "p2_fighter_id": "ID nhân vật Người chơi 2",
+        "p2_assistant_id": "ID trợ thủ Người chơi 2",
+        "map_id": "ID bản đồ",
+        "game_fps": "FPS game",
+        "training_recover": "Hiệu quả hồi máu chế độ luyện tập",
+        "error_message_prompt": "Gợi ý thông báo lỗi...",
+        "btn_test": "Kiểm thử",
+        "show_hit_area": "Hiện vùng đánh",
+        "hide_hit_area": "Ẩn vùng đánh",
+        "show_sprite_bounds": "Hiện khung sprite",
+        "hide_sprite_bounds": "Ẩn khung sprite",
+        "theme_light": "Sáng",
+        "theme_dark": "Tối"
+      },
+      "sprite_inspector_window": {
+        "idle": "Nhấn vào thực thể để khóa theo dõi\nChuột phải để xóa theo dõi",
+        "title": "Sprite Inspector",
+        "title_locked": "Sprite · {name}"
+      },
+      "game_interface_manager": {
+        "commit": "Gửi: <a href=\"{url}\" target=\"_blank\">{label}</a><br/>"
+      }
+    }
+  }
+}

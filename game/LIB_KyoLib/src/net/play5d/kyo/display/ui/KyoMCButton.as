@@ -1,0 +1,103 @@
+/*
+ * Copyright (C) 2021-2024, 5DPLAY Game Studio
+ * All rights reserved.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+package net.play5d.kyo.display.ui {
+import flash.display.MovieClip;
+import flash.events.Event;
+import flash.events.EventDispatcher;
+import flash.events.MouseEvent;
+
+/**
+ * 基于 MovieClip 帧的按钮：转发点击等鼠标事件，并支持焦点 / 禁用帧切换。
+ *
+ * @see IKyoButton
+ * @see KyoBtnGroup
+ * @see #focus
+ * @see #enabled
+ */
+public class KyoMCButton extends EventDispatcher implements IKyoButton {
+    /**
+     * @param mc 按钮皮肤 MovieClip。
+     * @param normalFrame 普通态帧（标签或帧号），默认 1。
+     * @param selectFrame 选中 / 焦点态帧，可选。
+     * @param overFrame 悬停态帧，可选（当前未自动切换）。
+     * @param disabledFrame 禁用态帧，可选。
+     */
+    public function KyoMCButton(
+        mc           :MovieClip,
+        normalFrame  :Object = 1,
+        selectFrame  :Object = null,
+        overFrame    :Object = null,
+        disabledFrame:Object = null
+    ) {
+        this.mc = mc;
+        mc.addEventListener(MouseEvent.CLICK, handler);
+        mc.addEventListener(MouseEvent.MOUSE_DOWN, handler);
+        mc.addEventListener(MouseEvent.MOUSE_UP, handler);
+
+        _normalFrame   = normalFrame;
+        _selectFrame   = selectFrame;
+        _overFrame     = overFrame;
+        _disabledFrame = disabledFrame;
+
+        goFrame(_normalFrame);
+    }
+
+    /**
+     * 按钮皮肤。
+     */
+    public var mc:MovieClip;
+    /** @private */
+    private var _selectFrame:Object;
+    /** @private */
+    private var _normalFrame:Object;
+    /** @private */
+    private var _overFrame:Object;
+    /** @private */
+    private var _disabledFrame:Object;
+
+    /** @private */
+    public function set focus(v:Boolean):void {
+        goFrame(v ? _selectFrame : _normalFrame);
+    }
+
+    /** @private */
+    public function set enabled(v:Boolean):void {
+        mc.mouseEnabled = v;
+        goFrame(v ? _normalFrame : _disabledFrame);
+    }
+
+    /**
+     * @private 跳转到指定帧（帧为空则忽略）。
+     */
+    private function goFrame(frame:Object):void {
+        if (frame) {
+            mc.gotoAndStop(frame);
+        }
+    }
+
+    /**
+     * @private 将 MC 上的鼠标事件再派发到本实例。
+     */
+    private function handler(e:Event):void {
+        dispatchEvent(e);
+    }
+
+}
+}
+

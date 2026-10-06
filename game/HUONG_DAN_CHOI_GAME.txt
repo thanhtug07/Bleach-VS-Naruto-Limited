@@ -1,0 +1,153 @@
+=====================================================================
+   BLEACH VS NARUTO (死神vs火影 · 绊 - 开放版) - HƯỚNG DẪN CÀI & CHƠI
+=====================================================================
+
+NGUỒN CÀI ĐẶT
+--------------
+- Mã nguồn  : https://github.com/5DPLAY-Game-Studio/BleachVsNaruto (đã clone
+              kèm submodules vào: C:\Bleach VS Naruto)
+- Game chơi : bản "Open - BleachVsNaruto" 3.4 (bản binary CHÍNH THỨC đã
+              biên dịch sẵn do chính 5DPLAY phát hành tại:
+              https://github.com/5DPLAY-Game-Studio/OpenBleachVsNaruto/releases
+              - release RELEASE_20260719, file swf_output.rar)
+- Vị trí game: C:\Bleach VS Naruto\Game\FighterTester.exe
+  (App Adobe AIR đã nhúng sẵn runtime -> KHÔNG cần cài Flash/AIR gì thêm)
+
+CÁCH MỞ GAME
+------------
+Cách 1: Nhấn đúp shortcut "Bleach VS Naruto" trên Desktop.
+Cách 2: Chạy file  C:\Bleach VS Naruto\ChoiGame.bat
+Cách 3: Vào thư mục C:\Bleach VS Naruto\Game , nhấn đúp FighterTester.exe.
+
+LƯU Ý QUAN TRỌNG VỀ THƯ MỤC GAME
+--------------------------------
+- KHÔNG di chuyển/đổi tên file exe một mình: FighterTester.exe phải luôn nằm
+  cạnh thư mục "Adobe AIR", "assets", "META-INF" và file FighterTester.swf.
+  Muốn chuyển game đi nơi khác thì copy CẢ THƯ MỤC "Game".
+
+PHÍM CHƠI (NGƯỜI CHƠI 1 - mặc định, lấy từ mã nguồn game)
+---------------------------------------------------------
+Di chuyển & phòng thủ:
+  A / D ............. Đi sang trái / phải
+  S (giữ) ........... Thủ / đỡ đòn (defense)
+  K ................. Nhảy
+  S + K ............. Nhảy xuống dưới (rơi xuyên bệ đỡ)
+  L ................. Dash (lướt nước rút)
+  ESC ............... Quay lại / thoát màn hình hiện tại
+
+Tấn công cơ bản (trên đất và trên không):
+  J ................. Đánh thường
+  S + J ............. Kỹ năng dưới (skill 1)
+  W + J ............. Kỹ năng trên (skill 2)
+  J + A hoặc D ...... Bắt/ôm đối thủ (catch)
+  U ................. Chiêu kỹ năng thường (chiêu 1)
+  S + U ............. Chiêu kỹ năng dưới (chiêu 2)
+  W + U ............. Chiêu kỹ năng trên (chiêu 3)
+  U + A hoặc D ...... Bắt đối thủ kiểu 2 (catch 2)
+
+Đại chiêu (cần thanh NĂNG LƯỢNG/气 đạt mức yêu cầu):
+  I ................. Đại chiêu (bisha)
+  W + I ............. Đại chiêu trên (bisha UP)
+  S + I ............. Đại chiêu dưới / siêu đại chiêu (bisha SUPER)
+  Trên không ....... I vẫn dùng được (đại chiêu trên không)
+
+Triệu hồi & Giác ngộ:
+  O ................. Triệu hồi trợ thủ (đồng đội hỗ trợ)
+  J + K cùng lúc .... GIÁC NGỘ / 万解 (wankai - cần điều kiện nhân vật)
+  W + J + K ......... Giác ngộ biến thể (tùy nhân vật)
+  S + J + K ......... Giác ngộ biến thể (tùy nhân vật)
+
+PHÍM NGƯỜI CHƠI 2 (mặc định - chơi 2 người cùng máy)
+-----------------------------------------------------
+  Phím mũi tên ...... Di chuyển (lên = nhảy hướng trên, xuống = thủ)
+  NumPad 1 .......... Đánh thường
+  NumPad 2 .......... Nhảy
+  NumPad 3 .......... Dash
+  NumPad 4 .......... Chiêu kỹ năng
+  NumPad 5 .......... Đại chiêu
+  NumPad 6 .......... Triệu hồi trợ thủ
+  (Tổ hợp tương tự P1: xuống+đánh, lên+đánh, đánh+mũi tên, 1+2 = giác ngộ...)
+
+ĐIỀU KHIỂN TRONG MENU
+----------------------
+  W/S/A/D hoặc các phím J K L U I O . Di chuyển mục & chọn
+  ESC .............................. Quay lại
+  (Trong menu, J/K/L/U/I/O đều dùng để xác nhận)
+
+MẸO CHƠI
+--------
+1. Vào OPTIONS (设置) trong game để:
+   - Đổi phím điều khiển theo ý muốn
+   - Bật/tắt hiện thanh máu, chỉnh độ khó AI, thời gian trận
+   - Chỉnh chất lượng hình ảnh (LOW/MEDIUM/HIGH) nếu máy yếu
+   - Chỉnh âm lượng nhạc/hiệu ứng
+2. Đại chiêu (I) cần đủ năng lượng: đừng bấm lung tung, giữ S + I là
+   siêu đại chiêu khi đầy năng lượng.
+3. Dash (L) + đánh thường là combo cơ bản để áp sát.
+4. Giữ S để đỡ đòn; đỡ đúng thời điểm giảm rất nhiều sát thương.
+5. Chơi với bạn bè: chọn chế độ VS 2 người, P1 dùng WASD+JKLUIO,
+   P2 dùng mũi tên + NumPad.
+
+GIỚI THIỆU NGẮN
+----------------
+"Bleach VS Naruto" (死神vs火影) là game đối kháng fan-made huyền thoại do
+剑jian và 5DPLAY Game Studio phát triển từ 2009. Bản này là phiên bản
+"MỞ" (Open) 3.4 - mã nguồn mở GPL-3.0, có đầy đủ các nhân vật Bleach và
+Naruto, nhiều bản đồ, chế độ đấu đơn/đấu đội với AI và chơi 2 người.
+
+PHÂN BIỆT CÁC THƯ MỤC TRONG C:\Bleach VS Naruto
+------------------------------------------------
+  Game\ ................. GAME CHƠI ĐƯỢC (bản binary Open 3.4)
+  BleachVsNaruto_FlashSrc\ , CORE_*, LIB_*, SHELL_*, shared\, tools\
+                        .. MÃ NGUỒN phiên bản 3.7 alpha (đã kèm TagAssets -
+                           tài nguyên SWF biên dịch sẵn 138 file)
+  ChoiGame.bat .......... File khởi chạy nhanh game
+  HUONG_DAN_CHOI_GAME.txt  File hướng dẫn này
+
+MUỐN BUILD TỪ MÃ NGUỒN 3.7 (dành cho lập trình viên)
+-----------------------------------------------------
+Đọc: C:\Bleach VS Naruto\HOW2BUILD.md
+Yêu cầu: Adobe Animate 2020 (bắt buộc để biên dịch .fla/.xfl) +
+         FlexSDK flex4.16.1-air51.0.1.1 + biến môi trường FLEX_HOME,
+         FLASH_HOME. Trên máy này CHƯA có Adobe Animate nên mới chỉ cài
+         được mã nguồn + tài nguyên, chưa build lại được binary.
+
+CHƠI ONLINE 1vs1 QUA MẠNG (BẢN VIỆT HÓA + NETPLAY)
+------------------------------------------------------------
+Yêu cầu: cả 2 máy đều dùng đúng bản game này (cùng thư mục Game).
+
+BƯỚC 1 - CẢ 2 MÁY: Mở game bằng ChoiGame.bat (tự chạy server ngầm).
+BƯỚC 2 - MÁY CHỦ (HOST):
+  1. Ở menu chính chọn CREATE LOBBY.
+  2. Nhập tên của bạn, bấm "Tạo phòng".
+  3. Màn hình hiện MÃ PHÒNG 6 ký tự (VD: BVN88K) - gửi mã này cho bạn.
+  4. Khi bạn vào phòng (P2 hiện tên), bấm "Bắt đầu".
+BƯỚC 3 - MÁY KHÁCH (GUEST):
+  1. Ở menu chính chọn PLAY ONLINE.
+  2. Nhập tên của bạn + IP của máy chủ vào ô "IP máy chủ"
+     (chung nhà/VPN: IP nội bộ VD 192.168.1.10; khác nhà: IP internet
+     của máy chủ), rồi bấm "Tìm phòng" (tự vào phòng đang chờ).
+  3. Đợi chủ phòng bấm bắt đầu.
+LƯU Ý: màn hình phòng chia 2 bên P1 (chủ) - P2 (khách), mỗi bên tự
+  chọn nhân vật/trợ thủ, bản đồ do chủ phòng chọn.
+TRONG TRẬN: mỗi người điều khiển nhân vật của mình (P1: WASD+JKLUIO,
+  P2: phím mũi tên + NumPad). Bấm ESC để tạm dừng (cả 2 máy cùng dừng).
+
+CHƠI QUA INTERNET (KHÁC NHÀ):
+  - Cách dễ: dùng phần mềm VPN LAN ảo (Radmin VPN / ZeroTier, miễn phí),
+    cả 2 máy vào cùng mạng ảo rồi chơi như chung nhà.
+  - Cách khác: máy chủ mở port 21337 trên router (port forward TCP 21337
+    về máy mình), bạn bè nhập IP mạng của bạn. Hỏi IP bằng: whatismyip.com
+SỰ CỐ:
+  - "Không nối được tới máy chủ": server chưa chạy (mở lại game), hoặc
+    sai IP, hoặc tường lửa chặn - cho phép node.exe qua firewall.
+  - Giật/lag: do mạng, hãy dùng mạng dây thay vì WiFi.
+
+LIÊN HỆ CHÍNH THỨC
+-------------------
+Website: https://5dplay-game-studio.github.io/BleachVsNaruto_Website/
+Bản "竞技版" (bản thi đấu) mới nhất 3.7 studio chỉ phát qua mạng cloud
+(Quark / Baidu / Weiyun) theo link trên trang chủ - nếu muốn bản mới
+nhất, bạn tự tải qua các link đó (cần app/đăng nhập của từng mạng cloud).
+
+Chúc bạn chơi game vui vẻ! ~ 5DPLAY Game Studio & Cline

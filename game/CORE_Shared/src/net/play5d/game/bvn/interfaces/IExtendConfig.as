@@ -1,0 +1,53 @@
+/*
+ * Copyright (C) 2021-2026, 5DPLAY Game Studio
+ * All rights reserved.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+package net.play5d.game.bvn.interfaces {
+
+/**
+ * 壳扩展配置序列化契约。
+ *
+ * <p>方法形状与 <code>ISaveData</code> 相同（<code>toSaveObj</code> / <code>readSaveObj</code>），
+ * 但角色不同：本接口面向壳扩展配置块；<code>ISaveData</code> 面向一般可存档对象。</p>
+ *
+ * @see ISaveData
+ */
+public interface IExtendConfig {
+
+    /**
+     * 保存到存档数据对象。
+     *
+     * @return 存档数据对象。
+     * @example
+     * <listing version="3.0">
+     * var obj:Object = extendConfig.toSaveObj();
+     * </listing>
+     */
+    function toSaveObj():Object;
+
+    /**
+     * 从存档数据对象读取。
+     *
+     * @param obj 存档数据对象。
+     * @example
+     * <listing version="3.0">
+     * extendConfig.readSaveObj(obj);
+     * </listing>
+     */
+    function readSaveObj(obj:Object):void;
+}
+}

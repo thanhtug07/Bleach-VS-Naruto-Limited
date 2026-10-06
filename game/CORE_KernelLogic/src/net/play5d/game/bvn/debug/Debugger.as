@@ -1,0 +1,118 @@
+/*
+ * Copyright (C) 2021-2024, 5DPLAY Game Studio
+ * All rights reserved.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+package net.play5d.game.bvn.debug {
+import flash.display.DisplayObject;
+import flash.display.Sprite;
+import flash.display.Stage;
+import flash.events.MouseEvent;
+import flash.filters.GlowFilter;
+import flash.system.System;
+
+import net.play5d.game.bvn.GameConfig;
+import net.play5d.game.bvn.ui.UIUtils;
+import net.play5d.kyo.display.BitmapText;
+
+public class Debugger {
+
+    public static const DRAW_AREA:Boolean      = false;
+    public static const SAFE_MODE:Boolean      = false;
+    public static const DEBUG_ENABLED:Boolean  = false;
+    public static const HIDE_MAP:Boolean       = false;
+    public static const HIDE_HITEFFECT:Boolean = false;
+    public static var onErrorMsgCall:Function;
+    private static var _stage:Stage;
+
+    public static function log(...params):void {
+        trace.call(null, params);
+    }
+
+    public static function errorMsg(msg:String):void {
+        TraceLang('debug.trace.data.debugger.error_msg', {message: '\n' + msg});
+        if (onErrorMsgCall != null) {
+            onErrorMsgCall(msg);
+        }
+    }
+
+    public static function initDebug(stage:Stage):void {
+        _stage = stage;
+
+        FPSDisplay.show(stage);
+    }
+
+    public static function addChild(d:DisplayObject):void {
+        _stage.addChild(d);
+    }
+
+    /**
+     * 显示当前提交哈希
+     *
+     * @param hash 完整提交哈希（用于复制到剪贴板）
+     * @param displayText 屏幕展示文本，省略时使用 <code>hash</code>
+     */
+    public static function showCommitHash(hash:String, displayText:String = null):void {
+        if (!hash) {
+            return;
+        }
+
+        var label:String = displayText || hash;
+
+        var hashText:BitmapText = new BitmapText(
+                true,
+                0xFFFF00,
+                [new GlowFilter(0x000000, 1, 2, 2, 3)]
+        );
+
+        hashText.font = FONT.fontName;
+        hashText.text = label;
+
+        UIUtils.formatText(hashText.textfield, {
+            color: 0xFFFF00,
+            size : 10
+        });
+
+        var sp:Sprite = new Sprite();
+        sp.y          = GameConfig.GAME_SIZE.y - 20;
+        sp.addChild(hashText);
+        sp.addEventListener(MouseEvent.CLICK, function (e:MouseEvent):void {
+            System.setClipboard(hash);
+        });
+
+        addChild(sp);
+    }
+
+    /**
+     * 显示 Stage 刷新率 FPS 叠加层。
+     *
+     * @param stage 目标舞台，省略时使用 {@link #initDebug} 传入的 Stage
+     * @see FPSDisplay#show
+     */
+    public static function showFPS(stage:Stage = null):void {
+        FPSDisplay.show(stage || _stage);
+    }
+    /**
+     * 隐藏并销毁 FPS 叠加层。
+     *
+     * @see FPSDisplay#hide
+     */
+    public static function hideFPS():void {
+        FPSDisplay.hide();
+    }
+
+}
+}

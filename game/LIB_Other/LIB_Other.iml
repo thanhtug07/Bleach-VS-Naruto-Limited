@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="LIB_Other">
+    <configurations>
+      <configuration name="LIB_Other" target-platform="Desktop" output-type="Library" output-file="LIB_Other.swc" output-folder="$MODULE_DIR$/../out/production/LIB_Other">
+        <dependencies target-player="51.0">
+          <entries>
+            <entry library-id="81cd4984-d683-4da7-8b81-b9790b5e3716">
+              <dependency linkage="Include" />
+            </entry>
+          </entries>
+          <sdk name="flex4.16.1-air51.0.1.1" />
+        </dependencies>
+        <compiler-options>
+          <option name="additionalOptions" value="-load-config+=tools/script/conf/sdk-external.xml" />
+        </compiler-options>
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/ActionBSON/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/easy_lua/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/fzip/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/Flash/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/as3xls/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/tweener/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/ASZip/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/AIRZIP/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/GZIPEncoder/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/nochump-util-zip-optimized/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/as3wavsound/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/minimalcomps/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lib/starling/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="flex4.16.1-air51.0.1.1" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="81cd4984-d683-4da7-8b81-b9790b5e3716" />
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/swc" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/swc" recursive="false" />
+      </library>
+    </orderEntry>
+  </component>
+</module>

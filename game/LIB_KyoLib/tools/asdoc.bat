@@ -1,0 +1,323 @@
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::
+:: Copyright (C) 2021-2026, 5DPLAY Game Studio
+:: All rights reserved.
+::
+:: This program is free software: you can redistribute it and/or modify
+:: it under the terms of the GNU General Public License as published by
+:: the Free Software Foundation, either version 3 of the License, or
+:: (at your option) any later version.
+::
+:: This program is distributed in the hope that it will be useful,
+:: but WITHOUT ANY WARRANTY; without even the implied warranty of
+:: MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+:: GNU General Public License for more details.
+::
+:: You should have received a copy of the GNU General Public License
+:: along with this program.  If not, see <http://www.gnu.org/licenses/>.
+::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::
+:: Purpose
+::   Generate ASDoc for LIB_KyoLib and/or embed ASDoc XML into the
+::   production SWC (docs/) for IDE code hints.
+::
+:: Usage
+::   LIB_KyoLib\tools\asdoc.bat
+::     MODE=full (default): HTML + embed into SWC.
+::
+::   set MODE=embed&& LIB_KyoLib\tools\asdoc.bat
+::     Full tempdita XML + embed. Used by embed_asdoc.bat / post-build.
+::
+::   set OPEN=1&& LIB_KyoLib\tools\asdoc.bat
+::   set SKIP_SWC=1&& LIB_KyoLib\tools\asdoc.bat
+::   set SWC_PATH=D:\path\LIB_KyoLib.swc&& LIB_KyoLib\tools\asdoc.bat
+::   set IF_MISSING=1&& ...   Skip when SWC already has docs/packages.dita
+::   set NO_PAUSE=1&& ...     No pause on failure (for build.bat / External Tool)
+::
+:: Prerequisites
+::   1. FLEX_HOME -> Flex/AIR SDK (bin, lib\asdoc.jar, frameworks, asdoc\templates)
+::   2. JRE/JDK that can run asdoc.jar (do NOT use SDK asdoc.bat on Java 9+)
+::   3. For embed: production SWC must exist (compc / IDEA / VSCode build first)
+::   4. Optional: LIB_Other.swc for cross-lib types (monorepo)
+::
+:: Layout (MODULE_ROOT = LIB_KyoLib)
+::   src\                      Documented sources (-doc-sources)
+::   lib\src\                  Third-party sources (filtered into -source-path)
+::   tools\asdoc.bat / tools\embed_asdoc.bat
+::   tools\asdoc\              Local zh_CN / templates + fallback ps1
+::   Prefer monorepo tools\script\ps\ when present (inject / wait / build_terms)
+::   out\asdoc\                HTML (MODE=full)
+::   out\asdoc_embed\          Embed-mode output (+ tempdita)
+::
+:: Notes
+::   ASCII-only console messages. No chcp / lang packs.
+::   Do NOT use -skip-xsl=true (drops summary XML; thin SWC docs).
+::   IDEA (monorepo): External Tool EmbedKyoLibAsDoc after Make.
+::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+@echo off
+setlocal enabledelayedexpansion
+
+set BAT_HOME=%~dp0
+
+if /i "%MODE%"=="" set MODE=full
+if /i not "%MODE%"=="embed" if /i not "%MODE%"=="full" (
+	echo Invalid MODE=%MODE% ^(use full or embed^)
+	goto END
+)
+
+if /i "%MODE%"=="embed" (
+	title LIB_KyoLib - ASDoc embed
+) else (
+	title LIB_KyoLib - ASDoc
+)
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: 1) Flex / AIR SDK
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+if "%FLEX_HOME%"=="" (
+	echo Environment variable FLEX_HOME is undefined!
+	goto END
+)
+call :EXIST "%FLEX_HOME%"
+
+set FLEX_BIN=%FLEX_HOME%\bin
+call :EXIST "%FLEX_BIN%"
+
+set ASDOC_JAR=%FLEX_HOME%\lib\asdoc.jar
+call :EXIST "%ASDOC_JAR%"
+
+set FLEX_FRAMEWORKS=%FLEX_HOME%\frameworks
+call :EXIST "%FLEX_FRAMEWORKS%"
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: 2) Module paths and target SWC
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+set MODULE_ROOT=%BAT_HOME%..
+for %%I in ("%MODULE_ROOT%") do set MODULE_ROOT=%%~fI
+
+set KYO_SRC=%MODULE_ROOT%\src
+set KYO_LIB_SRC=%MODULE_ROOT%\lib\src
+call :EXIST "%KYO_SRC%"
+call :EXIST "%KYO_LIB_SRC%"
+
+:: Parent may be monorepo root (BleachVsNaruto) or a standalone clone parent
+set REPO_ROOT=%MODULE_ROOT%\..
+for %%I in ("%REPO_ROOT%") do set REPO_ROOT=%%~fI
+
+:: Prefer monorepo tools\script\ps (single source); fallback to local copy
+set "ASDOC_PS=%REPO_ROOT%\tools\script\ps"
+if not exist "%ASDOC_PS%\inject_docs_swc.ps1" set "ASDOC_PS=%MODULE_ROOT%\tools\asdoc"
+set "ASDOC_LOCAL=%MODULE_ROOT%\tools\asdoc"
+
+set OTHER_SWC=%REPO_ROOT%\out\production\LIB_Other\LIB_Other.swc
+if not exist "%OTHER_SWC%" (
+	echo [WARN] LIB_Other.swc not found: %OTHER_SWC%
+	echo [WARN] Build LIB_Other first if asdoc reports unresolved types.
+	set OTHER_SWC=
+)
+
+:: Monorepo:  <repo>\out\production\LIB_KyoLib\LIB_KyoLib.swc
+:: Standalone submodule / asconfig.ind:
+::   <LIB_KyoLib>\out\production\LIB_KyoLib\LIB_KyoLib.swc
+set SWC_MONO=%REPO_ROOT%\out\production\LIB_KyoLib\LIB_KyoLib.swc
+set SWC_IND=%MODULE_ROOT%\out\production\LIB_KyoLib\LIB_KyoLib.swc
+
+if "%SWC_PATH%"=="" (
+	if exist "%SWC_MONO%" (
+		set SWC_PATH=%SWC_MONO%
+	) else if exist "%SWC_IND%" (
+		set SWC_PATH=%SWC_IND%
+	) else (
+		set SWC_PATH=%SWC_MONO%
+	)
+)
+
+if /i "%MODE%"=="embed" (
+	set DOC_OUT=%MODULE_ROOT%\out\asdoc_embed
+) else (
+	set DOC_OUT=%MODULE_ROOT%\out\asdoc
+)
+if not exist "%DOC_OUT%" mkdir "%DOC_OUT%"
+
+if /i "%IF_MISSING%"=="1" (
+	if exist "%SWC_PATH%" (
+		powershell -NoProfile -ExecutionPolicy Bypass -File "%ASDOC_PS%\inject_docs_swc.ps1" -SwcPath "%SWC_PATH%" -TestHasDocs >nul 2>&1
+		if not errorlevel 1 (
+			echo ASDoc already embedded in SWC; skip.
+			echo.
+			exit /b 0
+		)
+	)
+)
+
+if /i "%MODE%"=="embed" (
+	if not exist "%SWC_PATH%" (
+		echo SWC not found: %SWC_PATH%
+		echo Build LIB_KyoLib first.
+		goto END
+	)
+)
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: 3) Filter lib\src: drop Crypto.as, write a minimal stub
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+set FILTERED_LIB=%DOC_OUT%\_libsrc
+if exist "%FILTERED_LIB%" rmdir /s /q "%FILTERED_LIB%"
+mkdir "%FILTERED_LIB%"
+
+robocopy "%KYO_LIB_SRC%" "%FILTERED_LIB%" /E /XF Crypto.as /NFL /NDL /NJH /NJS /nc /ns /np >nul
+set RC=!ERRORLEVEL!
+if !RC! GEQ 8 (
+	echo ASDoc generation failed.
+	goto END
+)
+
+set STUB_DIR=%FILTERED_LIB%\com\hurlant\crypto
+if not exist "%STUB_DIR%" mkdir "%STUB_DIR%"
+(
+	echo package com.hurlant.crypto {
+	echo import flash.utils.ByteArray;
+	echo import com.hurlant.crypto.symmetric.ICipher;
+	echo import com.hurlant.crypto.symmetric.IPad;
+	echo public class Crypto {
+	echo public static function getCipher^(name:String, key:ByteArray, pad:IPad = null^):ICipher { return null; }
+	echo public static function getPad^(name:String^):IPad { return null; }
+	echo public static function getKeySize^(name:String^):uint { return 16; }
+	echo }
+	echo }
+) > "%STUB_DIR%\Crypto.as"
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: 4) Chinese UI chrome: terms + local templates
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+set PATH=%FLEX_BIN%;%PATH%
+
+set ASDOC_TMPL=%ASDOC_LOCAL%\templates
+set ASDOC_ZH_TERMS=%ASDOC_LOCAL%\zh_CN\ASDoc_terms.xml
+
+powershell -NoProfile -ExecutionPolicy Bypass -File "%ASDOC_PS%\build_terms_zh.ps1" -OutDir "%ASDOC_LOCAL%\zh_CN"
+if not exist "%ASDOC_ZH_TERMS%" (
+	echo ASDoc generation failed.
+	goto END
+)
+
+if not exist "%ASDOC_TMPL%\asdoc-util.xslt" (
+	mkdir "%ASDOC_TMPL%" 2>nul
+	robocopy "%FLEX_HOME%\asdoc\templates" "%ASDOC_TMPL%" /E /NFL /NDL /NJH /NJS /nc /ns /np >nul
+	set RC=!ERRORLEVEL!
+	if !RC! GEQ 8 (
+		echo ASDoc generation failed.
+		goto END
+	)
+)
+copy /Y "%ASDOC_ZH_TERMS%" "%ASDOC_TMPL%\ASDoc_terms.xml" >nul
+
+if /i "%MODE%"=="embed" (
+	echo Generating LIB_KyoLib ASDoc XML for SWC...
+) else (
+	echo Generating LIB_KyoLib ASDoc...
+)
+echo Output: %DOC_OUT%
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: 5) Run asdoc.jar
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+if defined OTHER_SWC (
+	java -Xmx1536m -classpath "%ASDOC_JAR%" flex2.tools.ASDoc ^
+		+flexlib="%FLEX_FRAMEWORKS%" ^
+		-templates-path "%ASDOC_TMPL%" ^
+		-compiler.source-path "%KYO_SRC%" "%FILTERED_LIB%" ^
+		-doc-sources "%KYO_SRC%" ^
+		-compiler.external-library-path "%FLEX_FRAMEWORKS%\libs" "%FLEX_FRAMEWORKS%\libs\air" "%FLEX_FRAMEWORKS%\libs\mx" "%OTHER_SWC%" ^
+		-lenient ^
+		-keep-xml=true ^
+		-main-title "LIB_KyoLib API" ^
+		-window-title "LIB_KyoLib ASDoc" ^
+		-footer "5DPLAY Game Studio - LIB_KyoLib" ^
+		-output "%DOC_OUT%"
+) else (
+	java -Xmx1536m -classpath "%ASDOC_JAR%" flex2.tools.ASDoc ^
+		+flexlib="%FLEX_FRAMEWORKS%" ^
+		-templates-path "%ASDOC_TMPL%" ^
+		-compiler.source-path "%KYO_SRC%" "%FILTERED_LIB%" ^
+		-doc-sources "%KYO_SRC%" ^
+		-compiler.external-library-path "%FLEX_FRAMEWORKS%\libs" "%FLEX_FRAMEWORKS%\libs\air" "%FLEX_FRAMEWORKS%\libs\mx" ^
+		-lenient ^
+		-keep-xml=true ^
+		-main-title "LIB_KyoLib API" ^
+		-window-title "LIB_KyoLib ASDoc" ^
+		-footer "5DPLAY Game Studio - LIB_KyoLib" ^
+		-output "%DOC_OUT%"
+)
+
+if errorlevel 1 (
+	echo ASDoc generation failed.
+	goto END
+)
+
+if /i "%MODE%"=="full" (
+	echo ASDoc generated: %DOC_OUT%\index.html
+) else (
+	echo ASDoc XML generated: %DOC_OUT%\tempdita
+)
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:: 6) Embed tempdita into SWC docs/
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+set TEMPDITA=%DOC_OUT%\tempdita
+
+if /i "%SKIP_SWC%"=="1" (
+	echo [WARN] SKIP_SWC=1: SWC docs embedding skipped.
+	goto AFTER_SWC
+)
+
+if not exist "%TEMPDITA%" (
+	echo tempdita missing; cannot embed into SWC.
+	goto END
+)
+
+if not exist "%SWC_PATH%" (
+	echo [WARN] SWC not found: %SWC_PATH%
+	echo [WARN] Build LIB_KyoLib first, then re-run to embed docs.
+	if /i "%MODE%"=="embed" goto END
+	goto AFTER_SWC
+)
+
+echo Embedding ASDoc into SWC: %SWC_PATH%
+powershell -NoProfile -ExecutionPolicy Bypass -File "%ASDOC_PS%\inject_docs_swc.ps1" -SwcPath "%SWC_PATH%" -TempDitaDir "%TEMPDITA%"
+if errorlevel 1 (
+	echo Failed to embed ASDoc into SWC.
+	goto END
+)
+echo ASDoc embedded into SWC docs/
+
+:AFTER_SWC
+
+if /i "%OPEN%"=="1" (
+	if exist "%DOC_OUT%\index.html" start "" "%DOC_OUT%\index.html"
+)
+
+echo.
+exit /b 0
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:END
+if /i not "%NO_PAUSE%"=="1" pause >nul
+exit /b 1
+
+:EXIST
+if not exist %1 (
+	echo File does not exist: %~1
+	goto END
+)
+goto :EOF

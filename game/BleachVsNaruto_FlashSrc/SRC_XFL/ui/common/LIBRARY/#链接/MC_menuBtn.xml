@@ -1,0 +1,31 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="#链接/MC_menuBtn" itemID="693f6ccf-00000046" linkageExportForAS="true" linkageClassName="$common$MC_menuBtn" lastModified="1765764303" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="MC_menuBtn">
+      <layers>
+        <DOMLayer name="图层 2" color="#9933CC" layerType="guide">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="图层 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="wzimg_bgimg" name="bg" selected="true" centerPoint3DX="194" centerPoint3DY="32.5">
+                  <matrix>
+                    <Matrix ty="-5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

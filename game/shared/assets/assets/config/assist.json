@@ -1,0 +1,496 @@
+{
+  "fighter": {
+    "path": {
+      "fighter": "fighter/fz/",
+      "face": "face/"
+    },
+    "data": [
+      {
+        "id": "kon",
+        "name": "Kon",
+        "comic_type": 0,
+        "urls": {
+          "file": "kon.swf",
+          "face": "kon.png",
+          "face_big": "kon_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "orihime",
+        "name": "Inoue Orihime",
+        "comic_type": 0,
+        "urls": {
+          "file": "orihime.swf",
+          "face": "orihime.png",
+          "face_big": "orihime_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "yoruichi",
+        "name": "Shihouin Yoruichi",
+        "comic_type": 0,
+        "urls": {
+          "file": "yoruichi.swf",
+          "face": "yoruichi.png",
+          "face_big": "orihime_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "uryuu",
+        "name": "Ishida Uryuu",
+        "comic_type": 0,
+        "urls": {
+          "file": "uryuu.swf",
+          "face": "uryuu.png",
+          "face_big": "uryuu_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "kenpachi",
+        "name": "Zaraki Kenpachi",
+        "comic_type": 0,
+        "urls": {
+          "file": "kenpachi.swf",
+          "face": "kenpachi.png",
+          "face_big": "kenpachi_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "ichigo_hollow",
+        "name": "Ichigo Ngưu Đầu",
+        "comic_type": 0,
+        "urls": {
+          "file": "ichigo_hollow.swf",
+          "face": "ichigo_hollow.png",
+          "face_big": "ichigo_hollow_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "yachiru",
+        "name": "Kusajishi Yachiru",
+        "comic_type": 0,
+        "urls": {
+          "file": "yachiru.swf",
+          "face": "yachiru.png",
+          "face_big": "yachiru_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "starrk",
+        "name": "Coyote Starrk",
+        "comic_type": 0,
+        "urls": {
+          "file": "starrk.swf",
+          "face": "starrk.png",
+          "face_big": "starrk_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "halibel",
+        "name": "Tier Harribel",
+        "comic_type": 0,
+        "urls": {
+          "file": "halibel.swf",
+          "face": "halibel.png",
+          "face_big": "halibel_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "grimmjow",
+        "name": "Grimmjow Jaegerjaquez",
+        "comic_type": 0,
+        "urls": {
+          "file": "grimmjow.swf",
+          "face": "grimmjow.png",
+          "face_big": "grimmjow_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "soifon",
+        "name": "Soi Fon",
+        "comic_type": 0,
+        "urls": {
+          "file": "soifon.swf",
+          "face": "soifon.png",
+          "face_big": "soifon_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "nemu",
+        "name": "Kurotsuchi Nemu",
+        "comic_type": 0,
+        "urls": {
+          "file": "nemu.swf",
+          "face": "nemu.png",
+          "face_big": "nemu_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "ichigo_padipata",
+        "name": "Ichigo Tu Hành",
+        "comic_type": 0,
+        "urls": {
+          "file": "ichigo_padipata.swf",
+          "face": "ichigo_padipata.png",
+          "face_big": "ichigo_padipata_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "yamamoto",
+        "name": "Yamamoto Genryuusai",
+        "comic_type": 0,
+        "urls": {
+          "file": "yamamoto.swf",
+          "face": "yamamoto.png",
+          "face_big": "yamamoto_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "gin",
+        "name": "Ichimaru Gin",
+        "comic_type": 0,
+        "urls": {
+          "file": "gin.swf",
+          "face": "gin.png",
+          "face_big": "gin_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "rangiku",
+        "name": "Matsumoto Rangiku",
+        "comic_type": 0,
+        "urls": {
+          "file": "rangiku.swf",
+          "face": "rangiku.png",
+          "face_big": "rangiku_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "byakuya",
+        "name": "Kuchiki Byakuya",
+        "comic_type": 0,
+        "urls": {
+          "file": "byakuya.swf",
+          "face": "byakuya.png",
+          "face_big": "byakuya_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "ikkaku",
+        "name": "Madarame Ikkaku",
+        "comic_type": 0,
+        "urls": {
+          "file": "ikkaku.swf",
+          "face": "ikkaku.png",
+          "face_big": "ikkaku_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "gaara",
+        "name": "Gaara",
+        "comic_type": 1,
+        "urls": {
+          "file": "gaara.swf",
+          "face": "gaara.png",
+          "face_big": "gaara_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "temari",
+        "name": "Temari",
+        "comic_type": 1,
+        "urls": {
+          "file": "temari.swf",
+          "face": "temari.png",
+          "face_big": "temari_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "ino",
+        "name": "Yamanaka Ino",
+        "comic_type": 1,
+        "urls": {
+          "file": "ino.swf",
+          "face": "ino.png",
+          "face_big": "ino_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "tenten",
+        "name": "Tenten",
+        "comic_type": 1,
+        "urls": {
+          "file": "tenten.swf",
+          "face": "tenten.png",
+          "face_big": "tenten_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "itachi",
+        "name": "Uchiha Itachi",
+        "comic_type": 1,
+        "urls": {
+          "file": "itachi.swf",
+          "face": "itachi.png",
+          "face_big": "itachi_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "hinata",
+        "name": "Hyuuga Hinata",
+        "comic_type": 1,
+        "urls": {
+          "file": "hinata.swf",
+          "face": "hinata.png",
+          "face_big": "hinata_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "tsunate",
+        "name": "Tsunade",
+        "comic_type": 1,
+        "urls": {
+          "file": "tsunate.swf",
+          "face": "tsunate.png",
+          "face_big": "tsunate_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "tsuchikage",
+        "name": "Oonoki Tsuchikage",
+        "comic_type": 1,
+        "urls": {
+          "file": "tsuchikage.swf",
+          "face": "tsuchikage.png",
+          "face_big": "tsuchikage_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "minato",
+        "name": "Namikaze Minato",
+        "comic_type": 1,
+        "urls": {
+          "file": "minato.swf",
+          "face": "minato.png",
+          "face_big": "minato_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "jiraiya",
+        "name": "Jiraiya",
+        "comic_type": 1,
+        "urls": {
+          "file": "jiraiya.swf",
+          "face": "jiraiya.png",
+          "face_big": "jiraiya_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "suigetsu",
+        "name": "Hoozuki Suigetsu",
+        "comic_type": 1,
+        "urls": {
+          "file": "suigetsu.swf",
+          "face": "suigetsu.png",
+          "face_big": "suigetsu_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "sai",
+        "name": "Sai",
+        "comic_type": 1,
+        "urls": {
+          "file": "sai.swf",
+          "face": "sai.png",
+          "face_big": "sai_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "madara",
+        "name": "Uchiha Madara",
+        "comic_type": 1,
+        "urls": {
+          "file": "madara.swf",
+          "face": "madara.png",
+          "face_big": "madara_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "kimimaro",
+        "name": "Kimimaro",
+        "comic_type": 1,
+        "urls": {
+          "file": "kimimaro.swf",
+          "face": "kimimaro.png",
+          "face_big": "kimimaro_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "shikamaru",
+        "name": "Nara Shikamaru",
+        "comic_type": 1,
+        "urls": {
+          "file": "shikamaru.swf",
+          "face": "shikamaru.png",
+          "face_big": "shikamaru_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "obito_trueColors",
+        "name": "Uchiha Obito Chân Diện",
+        "comic_type": 1,
+        "urls": {
+          "file": "obito_trueColors.swf",
+          "face": "obito_trueColors.png",
+          "face_big": "obito_trueColors_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "sakura",
+        "name": "Haruno Sakura",
+        "comic_type": 1,
+        "urls": {
+          "file": "sakura.swf",
+          "face": "sakura.png",
+          "face_big": "sakura_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "hiruko",
+        "name": "Sasori",
+        "comic_type": 1,
+        "urls": {
+          "file": "hiruko.swf",
+          "face": "hiruko.png",
+          "face_big": "hiruko_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "yls",
+        "name": "Senju Tobirama",
+        "comic_type": 1,
+        "urls": {
+          "file": "yls.swf",
+          "face": "yls.png",
+          "face_big": "yls_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "kabuto",
+        "name": "Yakushi Kabuto",
+        "comic_type": 1,
+        "urls": {
+          "file": "kabuto.swf",
+          "face": "kabuto.png",
+          "face_big": "kabuto_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "naruto",
+        "name": "Uzumaki Naruto",
+        "comic_type": 1,
+        "urls": {
+          "file": "naruto.swf",
+          "face": "naruto.png",
+          "face_big": "naruto_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "renji",
+        "name": "Abarai Renji",
+        "comic_type": 1,
+        "urls": {
+          "file": "renji.swf",
+          "face": "renji.png",
+          "face_big": "renji_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "utakata",
+        "name": "Utakata",
+        "comic_type": 1,
+        "urls": {
+          "file": "utakata.swf",
+          "face": "utakata.png",
+          "face_big": "utakata_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "shishio",
+        "name": "Shishio Makoto",
+        "comic_type": 1,
+        "urls": {
+          "file": "shishio.swf",
+          "face": "shishio.png",
+          "face_big": "shishio_b.png"
+        },
+        "hasWarning": true
+      },
+      {
+        "id": "random",
+        "name": null,
+        "comic_type": -1,
+        "urls": {
+          "face": "random.png"
+        }
+      },
+      {
+        "id": "random_bleach",
+        "name": null,
+        "comic_type": -1,
+        "urls": {
+          "face": "random_bleach.png"
+        }
+      },
+      {
+        "id": "random_naruto",
+        "name": null,
+        "comic_type": -1,
+        "urls": {
+          "face": "random_naruto.png"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,302 @@
+package net.play5d.game.bvn.mob.ctrls {
+import flash.events.EventDispatcher;
+import flash.net.Socket;
+import flash.utils.ByteArray;
+
+import net.play5d.game.bvn.MainGame;
+import net.play5d.game.bvn.interfaces.lan.ILanServerLockLink;
+import net.play5d.game.bvn.ctrler.lan.LanGameMenuCtrl;
+import net.play5d.game.bvn.ctrler.lan.LanServerSyncCore;
+import net.play5d.game.bvn.ctrler.lan.LockFrameServerLogic;
+import net.play5d.game.bvn.ctrler.lan.SelectFighterServerLogic;
+import net.play5d.game.bvn.interfaces.GameInterface;
+import net.play5d.game.bvn.data.lan.ClientVO;
+import net.play5d.game.bvn.data.lan.LanPorts;
+import net.play5d.game.bvn.mob.data.HostVO;
+import net.play5d.game.bvn.mob.events.LanEvent;
+import net.play5d.game.bvn.mob.input.InputManager;
+import net.play5d.kyo.air.socket.SocketServer;
+import net.play5d.kyo.air.socket.events.SocketEvent;
+import net.play5d.game.bvn.data.lan.UDPDataVO;
+import net.play5d.game.bvn.mob.sockets.udp.UDPSocket;
+import net.play5d.kyo.utils.JsonUtils;
+import net.play5d.game.bvn.ctrler.lan.LockFrameLogic;
+import net.play5d.game.bvn.mob.utils.MsgType;
+import net.play5d.game.bvn.mob.utils.SocketMsgFactory;
+import net.play5d.game.bvn.ui.GameUI;
+
+public class LANServerCtrl extends EventDispatcher implements ILanServerLockLink {
+    private static var _i:LANServerCtrl;
+
+    public static function get I():LANServerCtrl {
+        _i ||= new LANServerCtrl();
+        return _i;
+    }
+
+    public var active:Boolean;
+    private var _clientK:int;
+    private var _serverK:int;
+    private var _clients:Vector.<ClientVO> = new Vector.<ClientVO>();
+    private var _udpClientIP:String;
+    /**
+     * 运行帧数
+     */
+    private var _renderFrame:uint;
+    private var _renderFrameClient:uint;
+
+    private var _renderNextFrame:uint;
+
+    private var _renderSyncFrame:int;
+
+    private var _sendUpdateFrame:int;
+
+    private var _selectLogic:SelectFighterServerLogic;
+    private var _connGameLogic:LockFrameServerLogic;
+    private var _syncCore:LanServerSyncCore;
+
+    private var _playerClient:ClientVO;
+
+    private var _udpSocket:UDPSocket;
+
+    private var _host:HostVO;
+
+    public function get host():HostVO {
+        return _host;
+    }
+
+    public function startServer(host:HostVO):void {
+        _host = host;
+        SocketServer.I.bind(LanPorts.TCP);
+        SocketServer.I.addEventListener(SocketEvent.CLIENT_CONNECT, socketHandler);
+        SocketServer.I.addEventListener(SocketEvent.CLIENT_DIS_CONNECT, socketHandler);
+        SocketServer.I.addEventListener(SocketEvent.RECEIVE_DATA, socketDataHandler);
+
+        _udpSocket = new UDPSocket();
+        _udpSocket.listen(LanPorts.UDP_SERVER);
+        _udpSocket.addDataHandler(udpDataHandler);
+    }
+
+    public function stopServer():void {
+        _host = null;
+        SocketServer.I.close();
+        SocketServer.I.removeEventListener(SocketEvent.CLIENT_CONNECT, socketHandler);
+        SocketServer.I.removeEventListener(SocketEvent.CLIENT_DIS_CONNECT, socketHandler);
+        SocketServer.I.removeEventListener(SocketEvent.RECEIVE_DATA, socketDataHandler);
+
+        if (_udpSocket) {
+            _udpSocket.unListen();
+            _udpSocket.removeDataHandler(udpDataHandler);
+            _udpSocket = null;
+        }
+
+        if (_selectLogic) {
+            _selectLogic.dispose();
+            _selectLogic = null;
+        }
+        if (_connGameLogic) {
+            _connGameLogic.dispose();
+            _connGameLogic = null;
+        }
+
+        _clients = new Vector.<ClientVO>();
+        _host    = null;
+
+        _udpClientIP = null;
+    }
+
+    public function gameStart():void {
+        active = true;
+        GameInterface.instance.updateInputConfig();
+        LockFrameLogic.I.initServer(function ():Boolean {
+            return LANServerCtrl.I.renderGame();
+        });
+        _renderFrame = 1;
+
+        _selectLogic = new SelectFighterServerLogic();
+        _selectLogic.init(sendTCP);
+
+        _connGameLogic = new LockFrameServerLogic();
+        _connGameLogic.init(this, InputManager.I.socket_input_p1, InputManager.I.socket_input_p2);
+
+        _syncCore ||= new LanServerSyncCore();
+        _syncCore.bind(_connGameLogic, sendTCP);
+
+        LANGameCtrl.I.gameStart(_host);
+    }
+
+    public function gameEnd():void {
+        active = false;
+        GameInterface.instance.updateInputConfig();
+        LockFrameLogic.I.dispose();
+
+        if (_selectLogic) {
+            _selectLogic.dispose();
+            _selectLogic = null;
+        }
+        if (_connGameLogic) {
+            _connGameLogic.dispose();
+            _connGameLogic = null;
+        }
+
+        if (_syncCore) {
+            _syncCore.unbind();
+        }
+
+        LANGameCtrl.I.gameEnd();
+
+        gameQuit();
+    }
+
+    public function gameQuit():void {
+        active = false;
+        GameInterface.instance.updateInputConfig();
+        LockFrameLogic.I.dispose();
+
+        if (_syncCore) {
+            _syncCore.unbind();
+        }
+        LanGameMenuCtrl.I.dispose();
+
+        stopServer();
+
+        MainGame.stageCtrl.goStage(new MenuState());
+
+    }
+
+    public function renderGame():Boolean {
+        if (MainGame.stageCtrl.currentStage is GameState) {
+            return _connGameLogic.render();
+        }
+
+        InputManager.I.socket_input_p1.freeRender();
+
+        return true;
+    }
+
+    public function sendGameStart():void {
+        var data:Object = SocketMsgFactory.createStartGame();
+        for each(var i:ClientVO in _clients) {
+            SocketServer.I.sendJson(i.socket, data);
+        }
+    }
+
+    public function sendTCP(data:Object):void {
+        for each(var i:ClientVO in _clients) {
+            SocketServer.I.send(i.socket, data);
+        }
+    }
+
+    public function sendUDP(data:Object):void {
+        if (_udpClientIP) {
+            _udpSocket.send(_udpClientIP, LanPorts.UDP_CLIENT, data);
+        }
+    }
+
+    private function udpDataHandler(d:UDPDataVO):void {
+
+        var dataBytes:ByteArray = d.getDataByteArray();
+
+        if (dataBytes && dataBytes.readByte() == MsgType.FIND_HOST) {
+            if (!active) {
+                _udpSocket.send(
+                        d.fromIP, LanPorts.UDP_CLIENT, SocketMsgFactory.createFindHostBackMsg());
+            }
+            return;
+        }
+
+        if (_connGameLogic && _connGameLogic.receiveInput(dataBytes)) {
+            _udpClientIP = d.fromIP;
+            return;
+        }
+    }
+
+    private function receiveJson(msgObj:Object, clientSocket:Socket):void {
+        switch (msgObj.type) {
+        case MsgType.JOIN:
+            receiveJoin(msgObj, clientSocket);
+            break;
+        case MsgType.JOIN_IN:
+            break;
+        }
+
+    }
+
+    private function receiveJoin(msgObj:Object, clientSocket:Socket):void {
+        if (_clients.length > 0) {
+            //超出人数限制
+            SocketServer.I.sendJson(
+                    clientSocket,
+                    SocketMsgFactory.createJoinFailMsg(GetLang('txt.lan_server_ctrl.room_full'))
+            );
+            return;
+        }
+
+
+        var cv:ClientVO = new ClientVO();
+        cv.ip           = clientSocket.remoteAddress;
+        cv.name         = msgObj.name;
+        cv.socket       = clientSocket;
+
+        _clients.push(cv);
+        _playerClient = cv;
+
+
+        SocketServer.I.sendJson(cv.socket, SocketMsgFactory.createJoinSuccessMsg());
+
+        dispatchEvent(new LanEvent(LanEvent.CLIENT_JOIN_SUCCESS));
+
+    }
+
+    private function findClient(socket:Socket):ClientVO {
+        for each(var i:ClientVO in _clients) {
+            if (i.socket == socket) {
+                return i;
+            }
+        }
+        return null;
+    }
+
+    private function socketHandler(e:SocketEvent):void {
+        trace(e);
+        switch (e.type) {
+        case SocketEvent.CLIENT_CONNECT:
+
+
+            break;
+        case SocketEvent.CLIENT_DIS_CONNECT:
+
+            if (active) {
+                gameEnd();
+                GameUI.alert(
+                        GetLang('alert.lan_server_ctrl.player_exit_title'),
+                        GetLang('alert.lan_server_ctrl.player_exit')
+                );
+            }
+
+            _udpClientIP = null;
+
+            break;
+        }
+
+    }
+
+    private function socketDataHandler(e:SocketEvent):void {
+
+        var obj:Object = e.getDataObject();
+
+        if (!obj) {
+            return;
+        }
+
+        if (_selectLogic && _selectLogic.receiveSelect(obj)) {
+            return;
+        }
+
+        var json:Object = JsonUtils.str2json(obj);
+        if (json) {
+            receiveJson(json, e.clientSocket);
+        }
+    }
+
+}
+}
