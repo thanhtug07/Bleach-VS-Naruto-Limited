@@ -8,6 +8,8 @@ package
    import flash.events.ProgressEvent;
    import flash.events.SecurityErrorEvent;
    import flash.net.Socket;
+   import flash.net.URLLoader;
+   import flash.net.URLRequest;
    import flash.system.Security;
    import flash.text.TextField;
    import flash.text.TextFieldType;
@@ -339,6 +341,8 @@ package
 
       private static const NET_PUBLIC:String = "";
 
+      private var _netFileHost:String = "";
+
       private var _netHosts:Array;
 
       private var _netHostIdx:int = 0;
@@ -442,6 +446,7 @@ package
          trace("FighterTester.goLobby host=" + param1);
          _lbIsHost = param1;
          netCleanup();
+         netLoadServerFile();
          _testUI.x = 0;
          _testUI.visible = true;
          _testUI.graphics.clear();
@@ -540,13 +545,63 @@ package
          netConnect();
       }
 
+      private function netLoadServerFile() : void
+      {
+         try
+         {
+            var ld:URLLoader = new URLLoader();
+            ld.addEventListener(Event.COMPLETE,function(... rest) : void
+            {
+               var s:String = String(ld.data).replace(/^\s+|\s+$/g,"");
+               if(s.length > 0 && s.length < 128)
+               {
+                  _netFileHost = s;
+               }
+            });
+            ld.addEventListener(IOErrorEvent.IO_ERROR,function(... rest) : void
+            {
+            });
+            ld.addEventListener(SecurityErrorEvent.SECURITY_ERROR,function(... rest) : void
+            {
+            });
+            ld.load(new URLRequest("server.txt"));
+         }
+         catch(e:Error)
+         {
+         }
+      }
+
+      private function netSplitHost(param1:String) : Object
+      {
+         var s:String = param1.replace(/^\s+|\s+$/g,"");
+         var i:int = s.lastIndexOf(":");
+         if(i > 0 && i < s.length - 1)
+         {
+            var p:int = parseInt(s.substring(i + 1));
+            if(!isNaN(p) && p > 0 && p < 65536)
+            {
+               return {"h":s.substring(0,i),"p":p};
+            }
+         }
+         return {"h":s,"p":21337};
+      }
+
       private function netConnect() : void
       {
-         _netHosts = [NET_PUBLIC,"127.0.0.1"];
+         _netHosts = [];
+         if(_netFileHost.length > 0)
+         {
+            _netHosts.push(_netFileHost);
+         }
          if(_lbIp != null && _lbIp.text.length > 0)
          {
-            _netHosts = [_lbIp.text,NET_PUBLIC,"127.0.0.1"];
+            _netHosts.push(_lbIp.text);
          }
+         if(NET_PUBLIC.length > 0)
+         {
+            _netHosts.push(NET_PUBLIC);
+         }
+         _netHosts.push("127.0.0.1");
          _netHostIdx = 0;
          netTryHost();
       }
@@ -582,12 +637,21 @@ package
          }
          if(_netHostIdx >= _netHosts.length)
          {
-            netSay("Không nối được tới máy chủ.");
+            if(_lbIp != null)
+            {
+               netSay("Không nối được. Nhập đúng IP máy chủ rồi bấm lại.");
+            }
+            else
+            {
+               netSay("Không nối được. Mở lại game để chạy server.");
+            }
             return;
          }
          netCloseSocket();
-         var host:String = String(_netHosts[_netHostIdx]);
-         netSay("Đang nối tới " + host + "...");
+         var ep:Object = netSplitHost(String(_netHosts[_netHostIdx]));
+         var host:String = ep.h;
+         var port:int = ep.p;
+         netSay("Đang nối tới " + host + ":" + port + "...");
          _netSock = new Socket();
          _netSock.timeout = 8000;
          _netSock.addEventListener(Event.CONNECT,netOnConnect);
@@ -595,10 +659,10 @@ package
          _netSock.addEventListener(IOErrorEvent.IO_ERROR,netOnFail);
          _netSock.addEventListener(SecurityErrorEvent.SECURITY_ERROR,netOnFail);
          _netSock.addEventListener(ProgressEvent.SOCKET_DATA,netOnData);
-         Security.loadPolicyFile("xmlsocket://" + host + ":21337");
+         Security.loadPolicyFile("xmlsocket://" + host + ":" + port);
          try
          {
-            _netSock.connect(host,21337);
+            _netSock.connect(host,port);
          }
          catch(e:Error)
          {
