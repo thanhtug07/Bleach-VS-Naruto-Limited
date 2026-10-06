@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bleach VS Naruto — Bản Việt hóa + Netplay 1vs1</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0d0d12; color: #eee; font-family: "Segoe UI", Arial, sans-serif; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 40px; text-align: center; letter-spacing: 2px;
+       background: linear-gradient(180deg, #ffd23f, #ff7a00);
+       -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .sub { text-align: center; color: #aaa; margin: 8px 0 28px; }
+  .card { background: #17171f; border: 1px solid #2c2c3a; border-radius: 12px;
+          padding: 20px 22px; margin-bottom: 18px; }
+  .card h2 { color: #ffb340; font-size: 20px; margin-bottom: 12px; }
+  ol, ul { margin-left: 22px; line-height: 1.9; }
+  code { background: #000; color: #7CFC98; padding: 2px 8px; border-radius: 6px; }
+  .btn { display: inline-block; margin-top: 14px; padding: 12px 28px; border-radius: 8px;
+         background: linear-gradient(180deg, #ffb340, #f67a00); color: #1a0e00;
+         font-weight: bold; text-decoration: none; }
+  .btn.ghost { background: transparent; border: 1px solid #ffb340; color: #ffb340; margin-left: 10px; }
+  .note { color: #999; font-size: 14px; margin-top: 10px; line-height: 1.7; }
+  footer { text-align: center; color: #666; margin-top: 36px; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>BLEACH VS NARUTO</h1>
+  <p class="sub">Bản Việt hóa toàn diện + chế độ Online 1vs1 trong game (không cần web)</p>
+
+  <div class="card">
+    <h2>1. Tải bản chơi</h2>
+    <p>Vào mục <b>Releases</b> của repo này, tải file <code>Game-VN-Online.zip</code>,
+       giải nén rồi chạy <code>ChoiGame.bat</code> (tự mở server + game).</p>
+    <a class="btn" href="https://github.com/thanhtug07/Bleach-VS-Naruto-Limited/releases">Tải game (Releases)</a>
+    <a class="btn ghost" href="https://github.com/thanhtug07/Bleach-VS-Naruto-Limited">Mã nguồn</a>
+    <p class="note">Yêu cầu: Windows 64-bit. Lần đầu mở port 21337 khi firewall hỏi thì bấm Allow.</p>
+  </div>
+
+  <div class="card">
+    <h2>2. Chơi online 1vs1</h2>
+    <ol>
+      <li><b>Máy chủ:</b> menu <b>CREATE LOBBY</b> → nhập tên → <b>Tạo phòng</b> → gửi mã phòng 6 ký tự cho bạn.</li>
+      <li><b>Máy khách:</b> menu <b>PLAY ONLINE</b> → nhập tên + IP máy chủ → <b>Tìm phòng</b>.</li>
+      <li>Chủ phòng bấm <b>Bắt đầu</b>. Mỗi người điều khiển nhân vật của mình.</li>
+    </ol>
+    <p class="note">Chung nhà/chung VPN: dùng IP nội bộ (VD: 192.168.1.10). Khác nhà: máy chủ
+    port-forward TCP 21337 hoặc cùng vào Radmin VPN / ZeroTier.</p>
+  </div>
+
+  <div class="card">
+    <h2>3. Tự host server netplay</h2>
+    <p>Server nằm ở <code>netplay-server/</code> (Node.js, 0 dependency):</p>
+    <ul>
+      <li>Chạy local: <code>node server.js 21337</code></li>
+      <li>Deploy công cộng: dùng sẵn <code>Dockerfile</code> + <code>fly.toml</code>
+          (Fly.io) hoặc Railway từ repo này.</li>
+    </ul>
+    <p class="note">Sau khi có địa chỉ server công cộng, sửa hằng số <code>NET_PUBLIC</code>
+    trong <code>flash/swf-edits/FighterTester.as</code> rồi import lại vào SWF
+    bằng FFDec (xem <code>flash/BUILD.md</code>).</p>
+  </div>
+
+  <footer>BVN Netplay &bull; GPL-3.0 &bull; Việt hóa bởi cộng đồng</footer>
+</div>
+</body>
+</html>
