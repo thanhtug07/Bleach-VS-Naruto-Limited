@@ -95,7 +95,7 @@ package net.play5d.game.obvn.stage
          _btnGroup = new MenuBtnGroup();
          _btnGroup.enabled = false;
          _btnGroup.x = 470;
-         _btnGroup.y = 38;
+         _btnGroup.y = 90;
          ct = _ui.getChildByName("btnct") as Sprite;
          if(ct)
          {

@@ -58,12 +58,6 @@ package net.play5d.game.obvn.data
          },{
             "txt":"TRAINING",
             "cn":"Luyen tap   "
-         },{
-            "txt":"CREDITS",
-            "cn":"Nhom game"
-         },{
-            "txt":"MORE GAMES",
-            "cn":"Game khác  "
          }];
       }
    }

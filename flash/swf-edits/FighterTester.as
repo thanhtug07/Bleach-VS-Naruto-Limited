@@ -459,6 +459,16 @@ package
          _testUI.graphics.endFill();
          _lbBox = new Sprite();
          _testUI.addChild(_lbBox);
+         var boot:TextField = new TextField();
+         boot.defaultTextFormat = new TextFormat("_sans",22,16776960);
+         boot.text = "Đang mở lobby...";
+         boot.x = 250;
+         boot.y = 280;
+         boot.width = 400;
+         boot.height = 40;
+         _testUI.addChild(boot);
+         try
+         {
          _lbBox.addChild(netLabel("ONLINE LOBBY",38,16753920,230,24));
          _lbBox.addChild(netLabel("Tên bạn:",20,16777215,180,110));
          _lbName = netInput("Player",330,106,260);
@@ -491,6 +501,13 @@ package
          _lbStatus.multiline = true;
          _lbStatus.height = 120;
          _lbBox.addChild(_lbStatus);
+         _testUI.removeChild(boot);
+         }
+         catch(e:Error)
+         {
+            boot.textColor = 16711680;
+            boot.text = "Lỗi lobby: " + e.message;
+         }
       }
 
       private function netSay(param1:String) : void
@@ -796,8 +813,22 @@ package
       private function netEnterRoom() : void
       {
          var self:FighterTester = this;
+         var boot:TextField = new TextField();
+         boot.defaultTextFormat = new TextFormat("_sans",22,16776960);
+         boot.text = "Đang vào phòng...";
+         boot.x = 250;
+         boot.y = 280;
+         boot.width = 400;
+         boot.height = 40;
+         _testUI.addChild(boot);
+         try
+         {
          while(_testUI.numChildren > 0)
          {
+            if(_testUI.getChildAt(0) == boot)
+            {
+               break;
+            }
             _testUI.removeChildAt(0);
          }
          _lbBox = new Sprite();
@@ -859,6 +890,16 @@ package
          },150,44);
          _lbTouched = false;
          netSendPick();
+         if(_testUI.contains(boot))
+         {
+            _testUI.removeChild(boot);
+         }
+         }
+         catch(e:Error)
+         {
+            boot.textColor = 16711680;
+            boot.text = "Lỗi phòng: " + e.message;
+         }
       }
 
       private function netDoStart() : void
