@@ -117,6 +117,13 @@ function next(c, t, timeoutMs = 3000) {
   send(host2, { t: 'create' });
   const created2 = await next(host2, 'room_created');
   await next(host2, 'room_updated'); // drain 1-player snapshot
+  // Duplicate username in same (non-full) room rejected.
+  const dup = await makeClient('DUP');
+  send(dup, { t: 'hello', username: 'HOST2' });
+  await next(dup, 'welcome');
+  send(dup, { t: 'join', roomCode: created2.roomCode });
+  check('duplicate username rejected', ((await next(dup, 'error')).message || '').includes('Tên đã'));
+  dup.sock.end();
   const quick = await makeClient('Q');
   send(quick, { t: 'hello', username: 'Q' });
   await next(quick, 'welcome');

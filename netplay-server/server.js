@@ -21,16 +21,30 @@ const clients = new Map();
 
 function makeRoomCode() {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // no confusing 0/O/1/I
+  const letters = 'ABCDEFGHJKLMNPQRSTUVWXYZ';
+  const digits = '23456789';
+  const fix = (code) => {
+    const arr = code.split('');
+    const ri = () => Math.floor(Math.random() * 6);
+    if (!/[0-9]/.test(code)) {
+      arr[ri()] = digits[Math.floor(Math.random() * digits.length)];
+    }
+    if (!/[A-Z]/.test(code)) {
+      arr[ri()] = letters[Math.floor(Math.random() * letters.length)];
+    }
+    return arr.join('');
+  };
   for (let attempt = 0; attempt < 50; attempt++) {
     let code = '';
     for (let i = 0; i < 6; i++) {
       code += chars[Math.floor(Math.random() * chars.length)];
     }
+    code = fix(code);
     if (!rooms[code]) {
       return code;
     }
   }
-  return 'RM' + Date.now().toString(36).toUpperCase().slice(-4);
+  return fix('RM' + Date.now().toString(36).toUpperCase().slice(-4));
 }
 
 function send(sock, obj) {
@@ -159,6 +173,10 @@ function handleMessage(sock, msg) {
         send(sock, { t: 'error', message: 'Room is full.' });
         return;
       }
+      if (room.players.some((p) => p.username.toLowerCase() === cli.username.toLowerCase())) {
+        send(sock, { t: 'error', message: 'Tên đã có người dùng trong phòng. Đổi tên khác.' });
+        return;
+      }
       if (cli.roomCode) {
         leaveRoom(sock);
       }
@@ -186,6 +204,10 @@ function handleMessage(sock, msg) {
         leaveRoom(sock);
       }
       const rq = rooms[open];
+      if (rq.players.some((p) => p.username.toLowerCase() === cli.username.toLowerCase())) {
+        send(sock, { t: 'error', message: 'Tên đã có người dùng trong phòng. Đổi tên khác.' });
+        return;
+      }
       rq.players.push({ socketId: cli.socketId, username: cli.username, role: 'guest' });
       cli.roomCode = open;
       cli.role = 'guest';
