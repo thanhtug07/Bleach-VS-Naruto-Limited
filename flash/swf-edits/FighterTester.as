@@ -454,7 +454,7 @@ package
          {
             _testUI.removeChildAt(0);
          }
-         _testUI.graphics.beginFill(5,5,5,0.92);
+         _testUI.graphics.beginFill(328965,1);
          _testUI.graphics.drawRect(0,0,800,600);
          _testUI.graphics.endFill();
          _lbBox = new Sprite();
@@ -805,7 +805,7 @@ package
       private function netBox(param1:Number, param2:Number, param3:Number, param4:Number) : void
       {
          _lbBox.graphics.lineStyle(2,16753920,0.6);
-         _lbBox.graphics.beginFill(20,20,20,0.55);
+         _lbBox.graphics.beginFill(1315860,0.55);
          _lbBox.graphics.drawRect(param1,param2,param3,param4);
          _lbBox.graphics.endFill();
       }
